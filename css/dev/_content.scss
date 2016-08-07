@@ -1,0 +1,401 @@
+.index-preview {
+	text-align: center;
+	@include maxWidth;
+	background: url(../img/main-bg.jpg) 0 0 no-repeat;
+	color: #fff;
+	padding: 34px 0 55px 0;
+	overflow: hidden;
+	&__img {
+		margin: -22px 0 0 15px;
+		display: inline-block;
+		@include transform(rotate(2deg));
+	}
+	&__title {
+		margin: 0;
+		font-size: 57px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+	}
+	&__subtitle {
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-size: 40px;
+		font-weight: normal;
+		margin: 0;
+		display: inline-block;
+	}
+	&__text-wrap {
+		margin: 10px 0 0 -155px;
+		@include transform(rotate(-2deg));
+
+	}
+}
+.advantages,
+.todo {
+	text-align: center;
+	padding: 74px 0 40px;
+	&__list {
+		@include display(flex);
+		@include justify-content(space-around);
+		margin: 38px 0;
+		padding: 0;
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			flex-basis: 22%;
+			margin: 10px;
+		}
+		&-img {
+			margin-bottom: 31px;
+		}
+		&-title {
+			margin: 0 0 7px;
+			font-weight: bold;
+			font-size: 20px;
+			color: #352a28;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+		&-text {
+			font-family: $os;
+			color: #352a28;
+			margin: 0;
+		}
+	}
+}
+.advantages {
+	padding: 86px 0 52px 0;
+	&__list {
+		&-title {
+			@include display(flex);
+			width: 100%;
+			@include justify-content(center);
+			@include align-items(center);
+			min-height: 50px;
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+	}
+}
+.hotels-choose {
+	background: url(../img/hotels-bg.jpg) 0 0 no-repeat;
+	@include maxWidth;
+	height: 677px;
+	width: 100%;
+	// background-size: contain;
+}
+.service {
+	@include maxWidth;
+	text-align: center;
+	* {
+		@include transition(all 0.2s ease-in-out);
+	}
+	&-index {
+		.title {
+			display: inline-block;
+			text-align: right;
+			position: relative;
+			top: 80px;
+		}
+		.service {
+			&__list {
+				padding: 0;
+				margin: 0;
+				list-style-type: none;
+				@include display(flex);
+				&-wrap {
+					display: inline-block;
+					width: calc(100% - 220px);
+					margin-left: 10px;
+				}
+				&-item {
+					position: relative;
+					padding: 80px 10px 10px 10px;
+					flex-basis: 100%;
+					min-height: 430px;
+					max-width: 270px;
+					@include display(flex);
+					text-align: center;
+					&:hover {
+						.service__list-item-bg {
+							opacity: 1;
+						}
+						.service__list-item-title {
+							opacity: 0.9;
+							top: 0;
+							color: #fff;
+						}
+						.service__list-item-text {
+							display: block;
+							opacity: 0.9;
+							max-height: 20000px;
+							height: auto;
+						}
+						.service__list-item-img {
+							@include filter(brightness(2.5));
+							top: 0;
+						}
+					}
+					&-bg {
+						opacity: 0;
+						@include position(absolute, 0 0 0 0);
+						width: 100%;
+						height: 100%;
+						z-index: -1;
+					}
+					&-title {
+						text-transform: uppercase;
+						color: #2b2f38;
+						font-size: 12px;
+						position: relative;
+						top: 60px;
+					}
+					&-text {
+						color: #fff;
+						opacity: 0;
+						font-size: 11px;
+					}
+					&-img {
+						top: 60px;
+						position: relative;
+						&-wrap {
+							height: 98px;
+							padding: 10px;
+							@include display(flex);
+							@include align-items(center);
+							@include justify-content(center);
+						}
+					}
+				}
+			}
+		}
+	}
+	&__list {
+		&-item {
+			a {
+				color: inherit;
+				&:hover,
+				&:focus {
+					color: inherit;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.top-tour {
+	@include maxWidth;
+	@include display(flex);
+	&__block {
+		position: relative;
+		padding: 0;
+		&:not(:last-child) {
+			a {
+				&:before {
+					content: '';
+					@include position(absolute, null null 0 0);
+					width: 100%;
+					height: 325px;
+					background: url(../img/top-shadow.png) 0 0 no-repeat;
+					@include transition(all 0.2s ease-in-out);
+				}
+				&:hover:before {
+					opacity: 0.7;
+				}
+			}
+			
+		}
+		&:last-child {
+			@include align-items(center);
+			@include justify-content(center);
+			background-color: #29195b;
+			@include background-image(linear-gradient(60deg, #c17656 -25%, #fdbf93 125%));
+			@include transition(all 0.2s ease-in-out);
+			&:hover {
+				opacity: 0.9;
+			}
+			a {
+				height: 100%;
+				@include display(flex);
+				@include flex-wrap(wrap);
+				@include align-items(center);
+				@include justify-content(center);
+				@include align-content(center);
+				color: #fff;
+				text-transform: uppercase;
+				font-size: 50px;
+				line-height: normal;
+				font-weight: bold;
+				&:focus,
+				&:hover {
+					color: inherit;
+					color: #fff;
+					text-decoration: none;
+				}
+				* {
+					color: #fff;
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
+
+		&-description {
+			@include position(absolute, null 39px 33px 39px);
+			z-index: 10;
+			color: #fff;
+		}
+		&-price {
+			margin: 0 0 -8px;
+			color: #fff;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		&-title {
+			font-size: 30px;
+			margin: 0 0 2px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		&-preview {
+			font-family: $os;
+			color: #fff;
+			opacity: 0.9;
+			margin: 0;
+			line-height: 22px;
+		}
+	}
+}
+.action-slider {
+	@include maxWidth;
+	overflow: hidden;
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		&-item {
+			position: relative;
+			text-align: center;
+			&-action {
+				text-transform: uppercase;
+				color: #fff;
+				border-radius: $br;
+				display: inline-block;
+				font-weight: bold;
+				font-size: 20px;
+				margin: 0 0 15px;
+				padding: 6px 16px;
+				background-color: #e900ff;
+				@include background-image(linear-gradient(60deg, #c17656 -25%, #fdbf93 125%));
+			}
+			&-subtitle {
+				color: #febf93;
+				letter-spacing: 2px;
+				margin: 0 0 -15px;
+				font-size: 20px;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			&-title {
+				margin: 0 0 10px;
+				text-transform: uppercase;
+				color: #fff;
+				letter-spacing: 3px;
+				font-weight: bold;
+				font-size: 50px;
+			}
+			&-preview {
+				@include position(absolute, 0 0 null 0);
+				@include display(flex);
+				@include justify-content(center);
+				@include align-content(center);
+				@include flex-wrap(wrap);
+				height: 100%;
+				*:not(.action-slider__list-item-action) {
+					display: block;
+					width: 100%;
+				}
+				&-text {
+					font-family: $os;
+					font-size: 20px;
+					color: #fff;
+					opacity: 0.9;
+					margin: 0;	
+				}
+			}
+		}
+	}
+
+	// css слайдера акции
+	.bx-wrapper .bx-controls-direction a {
+		width: 71px;
+		height: 71px;
+	}
+	.bx-wrapper .bx-pager.bx-default-pager a {
+		width: 30px;
+		height: 5px;
+		margin: 0 9px;
+		border-radius: 3px;
+		background-color: #e3e1e8;
+		@include transition(all 0.2s ease-in-out);
+		&:hover,
+		&.active {
+			background-color: #834226;
+		}
+	}
+	.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+		bottom: -56px;
+	}
+	.bx-wrapper .bx-pager {
+		background: #f8f8f8;
+		padding: 40px 0 30px;
+	}
+}
+
+
+.testimonials {
+	padding: 75px 0;
+	&__list {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		&-item {
+			margin: 6px 0 16px 0;
+			&-img {
+				max-width: 100px;
+				max-height: 100px;
+				margin-bottom: 12px;
+				border-radius: 50%;
+			}
+			&-name {
+				color: #352a28;
+				font-size: 20px;
+				margin: 0 0 3px;
+				font-weight: bold;
+				letter-spacing: 2px;
+			}
+			&-city {
+				color: #834226;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				margin: 0 0 10px;
+			}
+			&-preview {
+				font-family: $os;
+				font-style: italic;
+				color: #352a28;
+				margin: 0;
+			}
+		}
+	}
+	&__title-wrap {
+		text-align: right;
+		margin-right: 20px;
+	}
+	&__btn {
+		margin-top: 14px;
+	}
+}

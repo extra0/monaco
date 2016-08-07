@@ -1,1 +1,7 @@
-@include font-face(" ", "../fonts/", $file-formats: ttf eot svg);
+@include font-face("PT Sans Caption", "../fonts/PTC55F", normal, normal, $file-formats: ttf);
+@include font-face("PT Sans Caption", "../fonts/PTC75F", bold, normal, $file-formats: ttf);
+
+@include font-face("Open Sans", "../fonts/OpenSans-Regular", normal, normal, $file-formats: ttf);
+@include font-face("Open Sans", "../fonts/OpenSans-Bold", bold, normal, $file-formats: ttf);
+@include font-face("Open Sans", "../fonts/OpenSans-BoldItalic", bold, italic, $file-formats: ttf);
+@include font-face("Open Sans", "../fonts/OpenSans-Italic", normal, italic, $file-formats: ttf);

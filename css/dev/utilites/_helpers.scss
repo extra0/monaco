@@ -24,3 +24,98 @@
 .p-b-20 {padding-bottom: 20px;}
 .p-b-25 {padding-bottom: 25px;}
 .p-b-30 {padding-bottom: 30px;}
+
+// тайтл
+.title {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0;
+	color: #342927;
+	font-size: 50px;
+	letter-spacing: 2px;
+	line-height: normal;
+	* {
+		display: block;
+		color: #834226;
+		font-size: 20px;
+		margin-bottom: -11px;
+	}
+}
+
+// фон с волнами
+.waves-bg {
+	background: url(../img/waves.png) 0 0 repeat-x;
+}
+
+// кнопка
+.btn {
+	border: none;
+	background: none;
+	@include transition(all 0.2s ease-in-out);
+	border-radius: $br;
+	background-color: #29dbef;
+	@include background-image(linear-gradient(60deg, #c17656 -25%, #fdbf93 125%));
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 15px;
+	position: relative;
+	padding: 16px 34px;
+	display: inline-block;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: #fff;
+		text-transform: uppercase;
+		opacity: 0.9;
+		img {
+			animation: spin 2s linear infinite;
+		}
+	}
+	&:before {
+		content: '';
+		@include position(absolute, null 0 -5px 0);
+		height: 30px;
+		opacity: 0.5;
+		width: 90%;
+		margin: 0 auto;
+		z-index: -1;
+		@include filter(blur(4px));
+		@include background-image(linear-gradient(60deg, #c17656 -25%, #fdbf93 125%));
+	}
+	&-block {
+		display: block;
+		width: 100%;
+	}
+	img {
+		display: inline-block;
+		margin: -4px 8px 0 0;
+		@include transition(all 0.2s ease-in-out);
+	}
+}
+
+// формы
+.form {
+	&-label {
+
+	}
+	&-control {
+
+	}
+	&-group {
+
+	}
+	&-label {
+
+	}
+}
+
+
+// animations
+@include keyframes(spin) {
+	0% {
+		@include transform(rotate(0deg));
+	}
+	100% {
+		@include transform(rotate(360deg));
+	}
+}

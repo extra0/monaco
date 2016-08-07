@@ -1,3 +1,40 @@
 footer.footer
 	.container
+		.footer__top
+			.footer__top-block
+				p.footer__top-block-title Меню
+				each item in footMenu
+					.footer__top-block-link-wrap
+						a.footer__top-block-link(href="#!") #{item}
+			.footer__top-block
+				p.footer__top-block-title Услуги
+				each item in footService
+					.footer__top-block-link-wrap
+						a.footer__top-block-link(href="#!") #{item}
+			.footer__top-block
+				p.footer__top-block-title Акции
+				each item in footAction
+					.footer__top-block-link-wrap
+						a.footer__top-block-link(href="#!") #{item}
+			.footer__top-block
+				p.footer__top-block-title Связь
+				each item in footComunication
+					.footer__top-block-link-wrap
+						a.footer__top-block-link(href="#!") #{item}
+			.footer__top-block
+				p.footer__top-block-title Давайте дружить
+				.footer__top-social-wrap
+					a.footer__top-social-link(href="#!" target="_blank")
+						img.footer__top-social-img(src="img/inst.png", alt="instagramm")
+				.footer__top-social-wrap
+					a.footer__top-social-link(href="#!" target="_blank")
+						img.footer__top-social-img(src="img/fb.png", alt="facebook")
+				.footer__top-social-wrap
+					a.footer__top-social-link(href="#!" target="_blank")
+						img.footer__top-social-img(src="img/vk.png", alt="vkontakte")
+		.footer__bottom
+			p.footer__bottom-copy &copy; Copyright 2016
+			.footer__bottom-development-block
+				p.footer__bottom-development-text Сделано в
+				a.footer__bottom-development(href="http://www.studio-maximus.com" target="_blank")
 include _script

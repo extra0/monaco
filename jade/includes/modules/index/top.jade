@@ -1,0 +1,16 @@
+- for (i=1; i<=4; i++) {
+	- if (i!=4) {
+		.top-tour__block.col-sm-4
+			a(href="#!")
+				img.top-tour__block-img(src="img/content/top.jpg", alt="Top tour img")
+				.top-tour__block-description
+					p.top-tour__block-price € #{i*120}
+					p.top-tour__block-title Для Двоих
+					p.top-tour__block-preview Ницца, Монако, Монте - Карло, Ез, Антибы, Канны, Сан поль де Ванс
+	- } else {
+		.top-tour__block.col-sm-4
+			a.top-tour__block-link.title(href="#!")
+				span больше 
+				| Туров
+	- }
+- }

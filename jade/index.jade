@@ -4,4 +4,46 @@ block append head
 	meta(name="keywords" content="")
 	title Главная страница
 block content
-	p .
+	// превью организации
+	.index-preview
+		img(src="img/logo-large.png", alt="Logo large")
+		.index-preview__text-wrap
+			h2.index-preview__title Огранизация туров
+			h3.index-preview__subtitle в монако от
+			img.index-preview__img(src="img/rich.png", alt="rich")
+	// конец превью организации
+	// чем заняться
+	.todo
+		.container
+			h2.title
+				span чем заняться 
+				| в монако?
+			include includes/modules/index/todo
+	// конец чем заняться
+	// выбор отеля
+	.hotels-choose
+		.container
+	// конец выбор отеля
+	// наши услуги
+	.service.service-index.waves-bg
+		.container
+			include includes/modules/index/service
+	// конец наши услуги
+	// блок топ туров
+	.top-tour
+		include includes/modules/index/top
+	// конец блок топ туров
+	// преимущества
+	.advantages.waves-bg
+		.container
+			h2.title
+				span почему
+				| мы лучше?
+			include includes/modules/index/advantages
+	// конец преимущества
+	// слайдер акций
+	include includes/modules/index/main-slider
+	// конец слайдер акций
+	// отзывы
+	include includes/modules/index/testimonials
+	// конец отзывы

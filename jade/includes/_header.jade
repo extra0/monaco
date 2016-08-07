@@ -1,4 +1,32 @@
 header.header
 	.container
-		a.header__logo(href="/")
-			img(src="img/logo.png" alt="Site Logo")
+		.row
+			.col-sm-3
+				// лого
+				a.header__logo(href="/")
+					img(src="img/logo.png" alt="Site Logo")
+				// конец лого
+			.col-sm-5
+				// меню
+				.header__menu
+					ul.header__menu-list
+						each item, i in menu
+							li.header__menu-item
+								- if (i == 0) {
+									span.header__menu-link.current #{item}
+								- } else {
+									a.header__menu-link(href="#!") #{item}
+								- }
+				// конец меню
+			.col-sm-4
+				// форма обратного звонка
+				.header__callback
+					form(action="#callback")
+						.header__callback-wrap
+							label.header__callback-label Номер Телефона
+							input.header__callback-input(type="tel" required only-numbers)
+						button.header__callback-btn(type="submit") Позвоните Мне
+				// конец форма обратного звонка
+				// телефон
+				a.header__phone(href="tel:+88006303030") 8 800 630 30 30
+				// конец телефон

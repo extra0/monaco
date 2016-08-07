@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- OpenGraph-->
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="URL текущей страницы">
+    <meta property="og:image" content="ссылка на картинку для страницы">
+    <meta property="og:site_name" content="Название сайта">
+    <!-- End OpenGraph-->
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Главная страница</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3">
+              <!-- лого--><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
+              <!-- конец лого-->
+            </div>
+            <div class="col-sm-5">
+              <!-- меню-->
+              <div class="header__menu">
+                <ul class="header__menu-list">
+                  <li class="header__menu-item"><span class="header__menu-link current">О нас</span>
+                  </li>
+                  <li class="header__menu-item"><a href="#!" class="header__menu-link">Благодарности</a>
+                  </li>
+                  <li class="header__menu-item"><a href="#!" class="header__menu-link">Партнерство</a>
+                  </li>
+                  <li class="header__menu-item"><a href="#!" class="header__menu-link">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- конец меню-->
+            </div>
+            <div class="col-sm-4">
+              <!-- форма обратного звонка-->
+              <div class="header__callback">
+                <form action="#callback">
+                  <div class="header__callback-wrap">
+                    <label class="header__callback-label">Номер Телефона</label>
+                    <input type="tel" required only-numbers class="header__callback-input">
+                  </div>
+                  <button type="submit" class="header__callback-btn">Позвоните Мне</button>
+                </form>
+              </div>
+              <!-- конец форма обратного звонка-->
+              <!-- телефон--><a href="tel:+88006303030" class="header__phone">8 800 630 30 30</a>
+              <!-- конец телефон-->
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <!-- превью организации-->
+        <div class="index-preview"><img src="img/logo-large.png" alt="Logo large">
+          <div class="index-preview__text-wrap">
+            <h2 class="index-preview__title">Огранизация туров</h2>
+            <h3 class="index-preview__subtitle">в монако от</h3><img src="img/rich.png" alt="rich" class="index-preview__img">
+          </div>
+        </div>
+        <!-- конец превью организации-->
+        <!-- чем заняться-->
+        <div class="todo">
+          <div class="container">
+            <h2 class="title"><span>чем заняться </span>в монако?</h2>
+            <ul class="todo__list">
+              <li class="todo__list-item"><img src="img/todo-img-1.png" alt="Todo-img" class="todo__list-img">
+                <p class="todo__list-title">Казино</p>
+                <p class="todo__list-text">Он приходит и разговаривает с Каннингеймом; затем появляется, когда Каннингейма здесь нет, и хочет узнать.</p>
+              </li>
+              <li class="todo__list-item"><img src="img/todo-img-2.png" alt="Todo-img" class="todo__list-img">
+                <p class="todo__list-title">Спорткары</p>
+                <p class="todo__list-text">Я слежу только за тем, чтобы работал гараж, чтобы в нем могли работать люди и чтобы каждый мог починить машину и привезти кусок хлеба домой.</p>
+              </li>
+              <li class="todo__list-item"><img src="img/todo-img-3.png" alt="Todo-img" class="todo__list-img">
+                <p class="todo__list-title">пляж</p>
+                <p class="todo__list-text">Дженкинс терпеливо слушает. Он знает, что у Уилла Дарнелла есть кое-какая за стенами гаража, но Дарнелл знает, что он знает.</p>
+              </li>
+              <li class="todo__list-item"><img src="img/todo-img-4.png" alt="Todo-img" class="todo__list-img">
+                <p class="todo__list-title">Архитектура</p>
+                <p class="todo__list-text">В какую-то минуту мне показалось, что он хотел сказать, но до смерти испугался чего-то. После этого он замкнулся в себе, и больше я не мог вытянуть из него ни слова».</p>
+              </li>
+              <li class="todo__list-item"><img src="img/todo-img-5.png" alt="Todo-img" class="todo__list-img">
+                <p class="todo__list-title">формула 1</p>
+                <p class="todo__list-text">Дженкинс отвечает: «Я так не думаю. Его родители говорят, что он спал, и я чувствую, что они не лгут, чтобы выгородить сына.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- конец чем заняться-->
+        <!-- выбор отеля-->
+        <div class="hotels-choose">
+          <div class="container"></div>
+        </div>
+        <!-- конец выбор отеля-->
+        <!-- наши услуги-->
+        <div class="service service-index waves-bg">
+          <div class="container">
+            <h2 class="title"><span>наши </span>услуги</h2>
+            <div class="service__list-wrap">
+              <ul class="service__list">
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                    <div class="service__list-item-img-wrap"><img src="img/service-img-1.png" alt="Service img" class="service__list-item-img"></div>
+                    <p class="service__list-item-title">аренда и покупка жилья</p>
+                    <p class="service__list-item-text">Спорткар, яхта, вертолет?</p></a></li>
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                    <div class="service__list-item-img-wrap"><img src="img/service-img-2.png" alt="Service img" class="service__list-item-img"></div>
+                    <p class="service__list-item-title">подбор персонала</p>
+                    <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                    <div class="service__list-item-img-wrap"><img src="img/service-img-3.png" alt="Service img" class="service__list-item-img"></div>
+                    <p class="service__list-item-title">организация событий</p>
+                    <p class="service__list-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos repudiandae illum voluptatibus corporis veniam vel molestias maiores soluta. Commodi, neque.</p></a></li>
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                    <div class="service__list-item-img-wrap"><img src="img/service-img-4.png" alt="Service img" class="service__list-item-img"></div>
+                    <p class="service__list-item-title">бронирование отелей</p>
+                    <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                    <div class="service__list-item-img-wrap"><img src="img/service-img-5.png" alt="Service img" class="service__list-item-img"></div>
+                    <p class="service__list-item-title">аренда любого транспорта</p>
+                    <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                    <div class="service__list-item-img-wrap"><img src="img/service-img-6.png" alt="Service img" class="service__list-item-img"></div>
+                    <p class="service__list-item-title">трансфер</p>
+                    <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                    <div class="service__list-item-img-wrap"><img src="img/service-img-7.png" alt="Service img" class="service__list-item-img"></div>
+                    <p class="service__list-item-title">организация поездок</p>
+                    <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                    <div class="service__list-item-img-wrap"><img src="img/service-img-8.png" alt="Service img" class="service__list-item-img"></div>
+                    <p class="service__list-item-title">Экскурсии на удобном языке</p>
+                    <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                    <div class="service__list-item-img-wrap"><img src="img/service-img-9.png" alt="Service img" class="service__list-item-img"></div>
+                    <p class="service__list-item-title">билеты на любые мероприятия</p>
+                    <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- конец наши услуги-->
+        <!-- блок топ туров-->
+        <div class="top-tour">
+          <div class="top-tour__block col-sm-4"><a href="#!"><img src="img/content/top.jpg" alt="Top tour img" class="top-tour__block-img">
+              <div class="top-tour__block-description">
+                <p class="top-tour__block-price">€ 120</p>
+                <p class="top-tour__block-title">Для Двоих</p>
+                <p class="top-tour__block-preview">Ницца, Монако, Монте - Карло, Ез, Антибы, Канны, Сан поль де Ванс</p>
+              </div></a></div>
+          <div class="top-tour__block col-sm-4"><a href="#!"><img src="img/content/top.jpg" alt="Top tour img" class="top-tour__block-img">
+              <div class="top-tour__block-description">
+                <p class="top-tour__block-price">€ 240</p>
+                <p class="top-tour__block-title">Для Двоих</p>
+                <p class="top-tour__block-preview">Ницца, Монако, Монте - Карло, Ез, Антибы, Канны, Сан поль де Ванс</p>
+              </div></a></div>
+          <div class="top-tour__block col-sm-4"><a href="#!"><img src="img/content/top.jpg" alt="Top tour img" class="top-tour__block-img">
+              <div class="top-tour__block-description">
+                <p class="top-tour__block-price">€ 360</p>
+                <p class="top-tour__block-title">Для Двоих</p>
+                <p class="top-tour__block-preview">Ницца, Монако, Монте - Карло, Ез, Антибы, Канны, Сан поль де Ванс</p>
+              </div></a></div>
+          <div class="top-tour__block col-sm-4"><a href="#!" class="top-tour__block-link title"><span>больше </span>Туров</a></div>
+        </div>
+        <!-- конец блок топ туров-->
+        <!-- преимущества-->
+        <div class="advantages waves-bg">
+          <div class="container">
+            <h2 class="title"><span>почему</span>мы лучше?</h2>
+            <ul class="advantages__list">
+              <li class="advantages__list-item"><img src="img/advant-img-1.png" alt="advantages-img" class="advantages__list-img">
+                <p class="advantages__list-title">сделано руками, а не роботом</p>
+                <p class="advantages__list-text">Вы получаете индивидуальный подход и можете в любой момент внести абсолютно любые изменение в свое путешествие.</p>
+              </li>
+              <li class="advantages__list-item"><img src="img/advant-img-2.png" alt="advantages-img" class="advantages__list-img">
+                <p class="advantages__list-title">Будет интересно</p>
+                <p class="advantages__list-text">Мы знаем о Монако не по наслышке, поэтому будут учтены все нюансы.</p>
+              </li>
+              <li class="advantages__list-item"><img src="img/advant-img-3.png" alt="advantages-img" class="advantages__list-img">
+                <p class="advantages__list-title">гарантия лучшей цены</p>
+                <p class="advantages__list-text">Нашли дешевле? Мы сделаем скидку!</p>
+              </li>
+              <li class="advantages__list-item"><img src="img/advant-img-4.png" alt="advantages-img" class="advantages__list-img">
+                <p class="advantages__list-title">Любые формы оплаты</p>
+                <p class="advantages__list-text">Наличные, безналичные, чеки, кредитные карты, оплата онлайн.</p>
+              </li>
+              <li class="advantages__list-item"><img src="img/advant-img-5.png" alt="advantages-img" class="advantages__list-img">
+                <p class="advantages__list-title">Поддержка 24/7</p>
+                <p class="advantages__list-text">Наши менеджеры готовы решить любую нестандартную ситюацию в любое время суток.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- конец преимущества-->
+        <!-- слайдер акций-->
+        <div class="action-slider">
+          <ul class="action-slider__list">
+            <li class="action-slider__list-item"><img src="img/content/action-1.jpg" alt="Action" class="action-slider__list-item-img">
+              <div class="action-slider__list-item-preview">
+                <p class="action-slider__list-item-action">акция</p>
+                <p class="action-slider__list-item-subtitle">трансфер на</p>
+                <p class="action-slider__list-item-title">bentley в подарок</p>
+                <p class="action-slider__list-item-preview-text">При заказе отеля на сумму до €5,000</p>
+              </div>
+            </li>
+            <li class="action-slider__list-item"><img src="img/content/action-2.jpg" alt="Action" class="action-slider__list-item-img">
+              <div class="action-slider__list-item-preview">
+                <p class="action-slider__list-item-action">акция</p>
+                <p class="action-slider__list-item-subtitle">трансфер на</p>
+                <p class="action-slider__list-item-title">Вертолете в подарок</p>
+                <p class="action-slider__list-item-preview-text">При заказе отеля на сумму до €5,000</p>
+              </div>
+            </li>
+            <li class="action-slider__list-item"><img src="img/content/action-3.jpg" alt="Action" class="action-slider__list-item-img">
+              <div class="action-slider__list-item-preview">
+                <p class="action-slider__list-item-action">акция</p>
+                <p class="action-slider__list-item-subtitle">при заселении</p>
+                <p class="action-slider__list-item-title">hennessy xo</p>
+                <p class="action-slider__list-item-preview-text">При заселении дарим Хэннеси и прочие приятные подарки.</p>
+              </div>
+            </li>
+            <li class="action-slider__list-item"><img src="img/content/action-4.jpg" alt="Action" class="action-slider__list-item-img">
+              <div class="action-slider__list-item-preview">
+                <p class="action-slider__list-item-action">акция</p>
+                <p class="action-slider__list-item-subtitle">от 4-ех ночей</p>
+                <p class="action-slider__list-item-title">1 ночь в подарок</p>
+                <p class="action-slider__list-item-preview-text">При заказе от 4-ех ночей - одну ночь получаете в подарок.</p>
+              </div>
+            </li>
+            <li class="action-slider__list-item"><img src="img/content/action-5.jpg" alt="Action" class="action-slider__list-item-img">
+              <div class="action-slider__list-item-preview">
+                <p class="action-slider__list-item-action">акция</p>
+                <p class="action-slider__list-item-subtitle">для casino de pari</p>
+                <p class="action-slider__list-item-title">€100 в подарок</p>
+                <p class="action-slider__list-item-preview-text">При заселении дарим Хэннеси и прочие приятные подарки.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- конец слайдер акций-->
+        <!-- отзывы-->
+        <div class="testimonials waves-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="testimonials__title-wrap">
+                  <h2 class="title"> <span>3 случайных</span>отзыва</h2><a href="#" fancybox class="btn testimonials__btn">оставить отзыв</a>
+                </div>
+              </div>
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="testimonials__list-item col-sm-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
+                    <p class="testimonials__list-item-name">Маша Гаврилина</p>
+                    <p class="testimonials__list-item-city">Одесса</p>
+                    <p class="testimonials__list-item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
+                  </div>
+                  <div class="testimonials__list-item col-sm-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
+                    <p class="testimonials__list-item-name">Маша Гаврилина</p>
+                    <p class="testimonials__list-item-city">Одесса</p>
+                    <p class="testimonials__list-item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
+                  </div>
+                  <div class="testimonials__list-item col-sm-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
+                    <p class="testimonials__list-item-name">Маша Гаврилина</p>
+                    <p class="testimonials__list-item-city">Одесса</p>
+                    <p class="testimonials__list-item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
+                  </div>
+                  <div class="col-sm-4 m-t-30 col-sm-offset-4"><a href="#!" class="btn"> <img src="img/spin.png" alt="spin">еще 3 отзыва</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- конец отзывы-->
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__top-block">
+            <p class="footer__top-block-title">Меню</p>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">О компании</a></div>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Отели</a></div>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Туры</a></div>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Информация</a></div>
+          </div>
+          <div class="footer__top-block">
+            <p class="footer__top-block-title">Услуги</p>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Аренда и покупка жилья</a></div>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Аренда транспорта</a></div>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Организация событий</a></div>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Подбор персонала</a></div>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Трансферы</a></div>
+          </div>
+          <div class="footer__top-block">
+            <p class="footer__top-block-title">Акции</p>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Трансфер на Bentley</a></div>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">$100 для казино</a></div>
+          </div>
+          <div class="footer__top-block">
+            <p class="footer__top-block-title">Связь</p>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Контакты</a></div>
+            <div class="footer__top-block-link-wrap"><a href="#!" class="footer__top-block-link">Позвоните мне</a></div>
+          </div>
+          <div class="footer__top-block">
+            <p class="footer__top-block-title">Давайте дружить</p>
+            <div class="footer__top-social-wrap"><a href="#!" target="_blank" class="footer__top-social-link"><img src="img/inst.png" alt="instagramm" class="footer__top-social-img"></a></div>
+            <div class="footer__top-social-wrap"><a href="#!" target="_blank" class="footer__top-social-link"><img src="img/fb.png" alt="facebook" class="footer__top-social-img"></a></div>
+            <div class="footer__top-social-wrap"><a href="#!" target="_blank" class="footer__top-social-link"><img src="img/vk.png" alt="vkontakte" class="footer__top-social-img"></a></div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__bottom-copy">&copy; Copyright 2016</p>
+          <div class="footer__bottom-development-block">
+            <p class="footer__bottom-development-text">Сделано в</p><a href="http://www.studio-maximus.com" target="_blank" class="footer__bottom-development"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+</html>

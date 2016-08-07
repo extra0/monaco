@@ -1,4 +1,14 @@
 // ---------------------  Variables
 
-$main_font: '', sans-serif;
-$main_color: #000;
+$main_font: 'PT Sans Caption', sans-serif;
+$main_color: #2b2f38;
+
+$os: "Open Sans", sans-serif;
+
+$br: 2px;
+
+// mixins
+@mixin maxWidth {
+	max-width: 1920px;
+	margin: 0 auto;
+}
