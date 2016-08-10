@@ -26,13 +26,15 @@
       <header class="header">
         <div class="container">
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-3 col-lg-2 col-xs-12">
               <!-- лого--><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
               <!-- конец лого-->
             </div>
-            <div class="col-sm-5">
+            <div class="col-md-6 col-sm-1 col-xs-12">
               <!-- меню-->
+              <button type="button" collapse class="header__menu-mob-btn visible-sm visible-xs"><span class="visible-xs">Меню</span></button>
               <div class="header__menu">
+                <!-- логотип для мобильного меню--><img style="padding: 13px;" src="img/logo.png" alt="menu logo" class="visible-sm visible-xs">
                 <ul class="header__menu-list">
                   <li class="header__menu-item"><span class="header__menu-link current">О нас</span>
                   </li>
@@ -43,12 +45,13 @@
                   <li class="header__menu-item"><a href="#!" class="header__menu-link">Контакты</a>
                   </li>
                 </ul>
+                <div class="text-center"><a href="javascript:void(0);" collapse class="btn header__mob-trigger">Закрыть</a></div>
               </div>
               <!-- конец меню-->
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-8 col-md-3 col-lg-4 col-xs-12">
               <!-- форма обратного звонка-->
-              <div class="header__callback">
+              <div class="header__callback hidden-md">
                 <form action="#callback">
                   <div class="header__callback-wrap">
                     <label class="header__callback-label">Номер Телефона</label>
@@ -104,7 +107,67 @@
         <!-- конец чем заняться-->
         <!-- выбор отеля-->
         <div class="hotels-choose">
-          <div class="container"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 col-md-3">
+                <div class="hotels-choose__filter">
+                  <h2 class="title"><span>выберите</span>отель</h2>
+                  <ul class="hotels-choose__filter-list">
+                    <li class="hotels-choose__filter-list-item"><a href="javascript:void(0);" data-category="all" class="hotels-choose__filter-list-trigger active">Все отели</a></li>
+                    <li class="hotels-choose__filter-list-item"><a href="javascript:void(0);" data-category="expensive" class="hotels-choose__filter-list-trigger">Самые дорогие</a></li>
+                    <li class="hotels-choose__filter-list-item"><a href="javascript:void(0);" data-category="cheapest" class="hotels-choose__filter-list-trigger">Самые не дорогие</a></li>
+                    <li class="hotels-choose__filter-list-item"><a href="javascript:void(0);" data-category="pair" class="hotels-choose__filter-list-trigger">Идеальные для пары</a></li>
+                    <li class="hotels-choose__filter-list-item"><a href="javascript:void(0);" data-category="alone" class="hotels-choose__filter-list-trigger">Идеальные для одного</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-8 col-md-9">
+                <div class="hotels-choose__map-holder"><img src="img/map.png" alt="map" class="hotels-choose__map-img hidden-sm hidden-xs">
+                  <div class="hotels-choose__map-dots hidden-sm hidden-xs"><a href="javascript:void(0);" style="top: 50px; right: 20px;" class="hotels-choose__map-dot"></a><a href="javascript:void(0);" style="top: 100px; right: 30px;" class="hotels-choose__map-dot"></a><a href="javascript:void(0);" style="top: 120px; right: 110px;" class="hotels-choose__map-dot"></a></div>
+                </div>
+                <div class="hotels-choose__slider-wrap">
+                  <ul class="hotels-choose__slider">
+                    <li data-category="pair cheapest" class="hotels-choose__slider-item">
+                      <div class="hotels-choose__slider-item-img-holder"><a href="#!"><img src="img/content/hotel.jpg" alt="hotel" class="hotels-choose__slider-item-img"></a></div>
+                      <div class="hotels-choose__slider-item-text-holder">
+                        <p class="hotels-choose__slider-item-name">Fairmont Monte Carlo</p>
+                        <div class="hotels-choose__slider-item-rating-block">
+                          <div class="hotels-choose__slider-item-rating-block"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img">
+                            <p class="hotels-choose__slider-item-rating-text">5 звезд</p>
+                          </div>
+                        </div>
+                        <p class="hotels-choose__slider-item-price">€ 5050 <span class="hotels-choose__slider-item-price-val">/ Ночь</span></p>
+                      </div>
+                    </li>
+                    <li data-category="alone expensive" class="hotels-choose__slider-item">
+                      <div class="hotels-choose__slider-item-img-holder"><a href="#!"><img src="img/content/hotel.jpg" alt="hotel" class="hotels-choose__slider-item-img"></a></div>
+                      <div class="hotels-choose__slider-item-text-holder">
+                        <p class="hotels-choose__slider-item-name">Fairmont Monte Carlo</p>
+                        <div class="hotels-choose__slider-item-rating-block">
+                          <div class="hotels-choose__slider-item-rating-block"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img">
+                            <p class="hotels-choose__slider-item-rating-text">5 звезд</p>
+                          </div>
+                        </div>
+                        <p class="hotels-choose__slider-item-price">€ 10100 <span class="hotels-choose__slider-item-price-val">/ Ночь</span></p>
+                      </div>
+                    </li>
+                    <li data-category="pair cheapest" class="hotels-choose__slider-item">
+                      <div class="hotels-choose__slider-item-img-holder"><a href="#!"><img src="img/content/hotel.jpg" alt="hotel" class="hotels-choose__slider-item-img"></a></div>
+                      <div class="hotels-choose__slider-item-text-holder">
+                        <p class="hotels-choose__slider-item-name">Fairmont Monte Carlo</p>
+                        <div class="hotels-choose__slider-item-rating-block">
+                          <div class="hotels-choose__slider-item-rating-block"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img"><img src="img/slider-star.png" alt="" class="hotels-choose__slider-item-rating-img">
+                            <p class="hotels-choose__slider-item-rating-text">5 звезд</p>
+                          </div>
+                        </div>
+                        <p class="hotels-choose__slider-item-price">€ 15150 <span class="hotels-choose__slider-item-price-val">/ Ночь</span></p>
+                      </div>
+                    </li>
+                  </ul><a href="#!" class="btn hotels-choose__btn">список всех отелей</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- конец выбор отеля-->
         <!-- наши услуги-->
@@ -113,39 +176,39 @@
             <h2 class="title"><span>наши </span>услуги</h2>
             <div class="service__list-wrap">
               <ul class="service__list">
-                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg-1.jpg" alt="service bg" class="service__list-item-bg">
                     <div class="service__list-item-img-wrap"><img src="img/service-img-1.png" alt="Service img" class="service__list-item-img"></div>
                     <p class="service__list-item-title">аренда и покупка жилья</p>
                     <p class="service__list-item-text">Спорткар, яхта, вертолет?</p></a></li>
-                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg-2.jpg" alt="service bg" class="service__list-item-bg">
                     <div class="service__list-item-img-wrap"><img src="img/service-img-2.png" alt="Service img" class="service__list-item-img"></div>
                     <p class="service__list-item-title">подбор персонала</p>
                     <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
-                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg-3.jpg" alt="service bg" class="service__list-item-bg">
                     <div class="service__list-item-img-wrap"><img src="img/service-img-3.png" alt="Service img" class="service__list-item-img"></div>
                     <p class="service__list-item-title">организация событий</p>
                     <p class="service__list-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos repudiandae illum voluptatibus corporis veniam vel molestias maiores soluta. Commodi, neque.</p></a></li>
-                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg-4.jpg" alt="service bg" class="service__list-item-bg">
                     <div class="service__list-item-img-wrap"><img src="img/service-img-4.png" alt="Service img" class="service__list-item-img"></div>
                     <p class="service__list-item-title">бронирование отелей</p>
                     <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
-                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg-5.jpg" alt="service bg" class="service__list-item-bg">
                     <div class="service__list-item-img-wrap"><img src="img/service-img-5.png" alt="Service img" class="service__list-item-img"></div>
                     <p class="service__list-item-title">аренда любого транспорта</p>
                     <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
-                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg-6.jpg" alt="service bg" class="service__list-item-bg">
                     <div class="service__list-item-img-wrap"><img src="img/service-img-6.png" alt="Service img" class="service__list-item-img"></div>
                     <p class="service__list-item-title">трансфер</p>
                     <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
-                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg-7.jpg" alt="service bg" class="service__list-item-bg">
                     <div class="service__list-item-img-wrap"><img src="img/service-img-7.png" alt="Service img" class="service__list-item-img"></div>
                     <p class="service__list-item-title">организация поездок</p>
                     <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
-                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg-8.jpg" alt="service bg" class="service__list-item-bg">
                     <div class="service__list-item-img-wrap"><img src="img/service-img-8.png" alt="Service img" class="service__list-item-img"></div>
                     <p class="service__list-item-title">Экскурсии на удобном языке</p>
                     <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
-                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg.jpg" alt="service bg" class="service__list-item-bg">
+                <li class="service__list-item"><a href="#!"><img src="img/content/service-bg-9.jpg" alt="service bg" class="service__list-item-bg">
                     <div class="service__list-item-img-wrap"><img src="img/service-img-9.png" alt="Service img" class="service__list-item-img"></div>
                     <p class="service__list-item-title">билеты на любые мероприятия</p>
                     <p class="service__list-item-text">Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно.</p></a></li>
@@ -156,25 +219,25 @@
         <!-- конец наши услуги-->
         <!-- блок топ туров-->
         <div class="top-tour">
-          <div class="top-tour__block col-sm-4"><a href="#!"><img src="img/content/top.jpg" alt="Top tour img" class="top-tour__block-img">
+          <div class="top-tour__block col-sm-6 col-lg-4 col-xs-6 col-xxs-12"><a href="#!"><img src="img/content/top-1.jpg" alt="Top tour img" class="top-tour__block-img">
               <div class="top-tour__block-description">
                 <p class="top-tour__block-price">€ 120</p>
                 <p class="top-tour__block-title">Для Двоих</p>
                 <p class="top-tour__block-preview">Ницца, Монако, Монте - Карло, Ез, Антибы, Канны, Сан поль де Ванс</p>
               </div></a></div>
-          <div class="top-tour__block col-sm-4"><a href="#!"><img src="img/content/top.jpg" alt="Top tour img" class="top-tour__block-img">
+          <div class="top-tour__block col-sm-6 col-lg-4 col-xs-6 col-xxs-12"><a href="#!"><img src="img/content/top-2.jpg" alt="Top tour img" class="top-tour__block-img">
               <div class="top-tour__block-description">
                 <p class="top-tour__block-price">€ 240</p>
                 <p class="top-tour__block-title">Для Двоих</p>
                 <p class="top-tour__block-preview">Ницца, Монако, Монте - Карло, Ез, Антибы, Канны, Сан поль де Ванс</p>
               </div></a></div>
-          <div class="top-tour__block col-sm-4"><a href="#!"><img src="img/content/top.jpg" alt="Top tour img" class="top-tour__block-img">
+          <div class="top-tour__block col-sm-6 col-lg-4 col-xs-6 col-xxs-12"><a href="#!"><img src="img/content/top-3.jpg" alt="Top tour img" class="top-tour__block-img">
               <div class="top-tour__block-description">
                 <p class="top-tour__block-price">€ 360</p>
                 <p class="top-tour__block-title">Для Двоих</p>
                 <p class="top-tour__block-preview">Ницца, Монако, Монте - Карло, Ез, Антибы, Канны, Сан поль де Ванс</p>
               </div></a></div>
-          <div class="top-tour__block col-sm-4"><a href="#!" class="top-tour__block-link title"><span>больше </span>Туров</a></div>
+          <div class="top-tour__block col-sm-6 col-lg-4 col-xs-6 col-xxs-12"><a href="#!" class="top-tour__block-link title"><span>больше </span>Туров</a></div>
         </div>
         <!-- конец блок топ туров-->
         <!-- преимущества-->
@@ -207,7 +270,7 @@
         </div>
         <!-- конец преимущества-->
         <!-- слайдер акций-->
-        <div class="action-slider">
+        <div class="action-slider hidden-xs">
           <ul class="action-slider__list">
             <li class="action-slider__list-item"><img src="img/content/action-1.jpg" alt="Action" class="action-slider__list-item-img">
               <div class="action-slider__list-item-preview">
@@ -256,28 +319,52 @@
         <div class="testimonials waves-bg">
           <div class="container">
             <div class="row">
-              <div class="col-sm-3">
+              <div class="col-md-3 col-sm-12">
                 <div class="testimonials__title-wrap">
-                  <h2 class="title"> <span>3 случайных</span>отзыва</h2><a href="#" fancybox class="btn testimonials__btn">оставить отзыв</a>
+                  <h2 class="title"> <span>3 случайных</span>отзыва</h2><a href="#testimonial-window" fancybox class="btn testimonials__btn">оставить отзыв</a>
+                  <!-- модальное окно с формой отзыва-->
+                  <div id="testimonial-window" class="modal">
+                    <form action="#!">
+                      <button type="button" class="modal__close"></button>
+                      <div class="modal__header">
+                        <h3 class="modal__header-title">Новый комментарий</h3>
+                      </div>
+                      <div class="modal__body">
+                        <div class="form-group">
+                          <label class="form-label">ссылка на профиль в соц. сети</label>
+                          <input type="text" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">Ваш комментарtий</label>
+                          <input type="text" required class="form-control">
+                        </div>
+                      </div>
+                      <div class="modal__footer">
+                        <button type="submit" class="btn modal__footer-btn">Отправить</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
-              <div class="col-sm-9">
+              <div class="col-md-9 col-sm-12">
                 <div class="row">
-                  <div class="testimonials__list-item col-sm-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
+                  <div class="testimonials__list-item col-sm-4 col-xxs-12 col-xs-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
                     <p class="testimonials__list-item-name">Маша Гаврилина</p>
                     <p class="testimonials__list-item-city">Одесса</p>
                     <p class="testimonials__list-item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
                   </div>
-                  <div class="testimonials__list-item col-sm-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
+                  <div class="testimonials__list-item col-sm-4 col-xxs-12 col-xs-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
                     <p class="testimonials__list-item-name">Маша Гаврилина</p>
                     <p class="testimonials__list-item-city">Одесса</p>
                     <p class="testimonials__list-item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
                   </div>
-                  <div class="testimonials__list-item col-sm-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
+                  <div class="testimonials__list-item col-sm-4 col-xxs-12 col-xs-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
                     <p class="testimonials__list-item-name">Маша Гаврилина</p>
                     <p class="testimonials__list-item-city">Одесса</p>
                     <p class="testimonials__list-item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-sm-4 m-t-30 col-sm-offset-4"><a href="#!" class="btn"> <img src="img/spin.png" alt="spin">еще 3 отзыва</a></div>
                 </div>
               </div>

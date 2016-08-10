@@ -1,0 +1,47 @@
+.hotels-choose
+	.container
+		.row
+			.col-sm-4.col-md-3
+				.hotels-choose__filter
+					h2.title
+						span выберите
+						| отель
+					ul.hotels-choose__filter-list
+						li.hotels-choose__filter-list-item
+							a.hotels-choose__filter-list-trigger.active(href="javascript:void(0);" data-category="all") Все отели
+						li.hotels-choose__filter-list-item
+							a.hotels-choose__filter-list-trigger(href="javascript:void(0);" data-category="expensive") Самые дорогие
+						li.hotels-choose__filter-list-item
+							a.hotels-choose__filter-list-trigger(href="javascript:void(0);" data-category="cheapest") Самые не дорогие
+						li.hotels-choose__filter-list-item
+							a.hotels-choose__filter-list-trigger(href="javascript:void(0);" data-category="pair") Идеальные для пары
+						li.hotels-choose__filter-list-item
+							a.hotels-choose__filter-list-trigger(href="javascript:void(0);" data-category="alone") Идеальные для одного
+			.col-sm-8.col-md-9
+				.hotels-choose__map-holder
+					img.hotels-choose__map-img.hidden-sm.hidden-xs(src="img/map.png", alt="map")
+					.hotels-choose__map-dots.hidden-sm.hidden-xs
+						a.hotels-choose__map-dot(href="javascript:void(0);" style="top: 50px; right: 20px;")
+						a.hotels-choose__map-dot(href="javascript:void(0);" style="top: 100px; right: 30px;")
+						a.hotels-choose__map-dot(href="javascript:void(0);" style="top: 120px; right: 110px;")
+				.hotels-choose__slider-wrap
+					ul.hotels-choose__slider
+						- for (i=1;i<=3;i++) {
+							li.hotels-choose__slider-item(data-category="#{i==2? 'alone expensive' : 'pair cheapest'}")
+								.hotels-choose__slider-item-img-holder
+									a(href="#!")
+										img.hotels-choose__slider-item-img(src="img/content/hotel.jpg", alt="hotel")
+								.hotels-choose__slider-item-text-holder
+									p.hotels-choose__slider-item-name Fairmont Monte Carlo
+									.hotels-choose__slider-item-rating-block
+										.hotels-choose__slider-item-rating-block
+											img.hotels-choose__slider-item-rating-img(src="img/slider-star.png", alt="")
+											img.hotels-choose__slider-item-rating-img(src="img/slider-star.png", alt="")
+											img.hotels-choose__slider-item-rating-img(src="img/slider-star.png", alt="")
+											img.hotels-choose__slider-item-rating-img(src="img/slider-star.png", alt="")
+											img.hotels-choose__slider-item-rating-img(src="img/slider-star.png", alt="")
+											p.hotels-choose__slider-item-rating-text 5 звезд
+									p.hotels-choose__slider-item-price € #{i*5050} 
+										span.hotels-choose__slider-item-price-val / Ночь
+						- }
+					a.btn.hotels-choose__btn(href="#!") список всех отелей

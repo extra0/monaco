@@ -23,3 +23,12 @@ button, input, textarea, select {
 .container {
 	padding: 0 5px;
 }
+.main-wrapper {
+	overflow: hidden;
+	@include transition(all 0.2s ease-in-out);
+	position: relative;
+	left: 0;
+	&.active {
+		left: 230px;
+	}
+}

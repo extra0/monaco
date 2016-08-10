@@ -61,6 +61,7 @@
 	position: relative;
 	padding: 16px 34px;
 	display: inline-block;
+	z-index: 2;
 	&:hover,
 	&:focus {
 		text-decoration: none;
@@ -96,17 +97,33 @@
 // формы
 .form {
 	&-label {
-
+		display: block;
+		text-transform: uppercase;
+		color: #7e7770;
+		font-size: 11px;
 	}
 	&-control {
-
+		border: none;
+		background: none;
+		resize: none;
+		font-size: 15px;
+		width: 100%;
+		border-bottom: 1px solid #c27656;
+		padding: 5px 0 8px 0;
+		color: #342927;
+		margin: -2px 8px 0 0;
 	}
 	&-group {
-
+		margin-bottom: 28px;
+		display: block;
 	}
-	&-label {
+}
 
-	}
+// panel
+.block-panel {
+	border: 1px solid #ddd;
+	background: #fff;
+	padding: 15px;
 }
 
 
@@ -118,4 +135,63 @@
 	100% {
 		@include transform(rotate(360deg));
 	}
+}
+
+// модальные окна
+.modal {
+	display: none;
+	position: relative;
+	background: #fff;
+	border-radius: $br;
+	padding: 22px 29px 29px;
+	&__header {
+		margin-bottom: 17px;
+		&-title {
+			color: #352927;
+			font-size: 24px;
+			margin: 0;
+			font-weight: normal;
+		}
+	}
+	&__footer {
+		text-align: right;
+		margin-top: 10px;
+		&-btn {
+			padding: 16px 50px;
+		}
+	}
+	&__close {
+		background: none;
+		border: none;
+		height: 18px;
+		width: 18px;
+		@include position(absolute, 35px 28px null null);
+		&:after,
+		&:before {
+			content: '';
+			background: #ebd2c7;
+			@include position(absolute, 0 null null 0);
+			width: 100%;
+			height: 3px;
+			border-radius: $br;
+			@include transition(all 0.2s ease-in-out);
+		}
+		&:after {
+			@include transform(rotate(-45deg));
+		}
+		&:before {
+			@include transform(rotate(45deg));
+		}
+		&:hover {
+			&:before {
+				@include transform(rotate(135deg));
+			}
+			&:after {
+				@include transform(rotate(-135deg));
+			}
+		}
+	}
+}
+#testimonial-window {
+	width: 570px;
 }

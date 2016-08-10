@@ -1,21 +1,37 @@
 .testimonials.waves-bg
 	.container
 		.row
-			.col-sm-3
+			.col-md-3.col-sm-12
 				.testimonials__title-wrap
 					h2.title 
 						span 3 случайных
 						| отзыва
-					a.btn.testimonials__btn(href="#" fancybox) оставить отзыв
-			.col-sm-9
+					a.btn.testimonials__btn(href="#testimonial-window" fancybox) оставить отзыв
+					// модальное окно с формой отзыва
+					.modal#testimonial-window
+						form(action="#!")
+							button.modal__close(type="button")
+							.modal__header
+								h3.modal__header-title Новый комментарий
+							.modal__body
+								.form-group
+									label.form-label ссылка на профиль в соц. сети
+									input.form-control(type="text" required)
+								.form-group
+									label.form-label Ваш комментарtий
+									input.form-control(type="text" required)
+							.modal__footer
+								button.btn.modal__footer-btn(type="submit") Отправить
+			.col-md-9.col-sm-12
 				.row
 					- for (i=1; i<=3; i++) {
-						.testimonials__list-item.col-sm-4
+						.testimonials__list-item.col-sm-4.col-xxs-12.col-xs-4
 							img.testimonials__list-item-img(src="img/content/ava.jpg", alt="ava")
 							p.testimonials__list-item-name Маша Гаврилина
 							p.testimonials__list-item-city Одесса
 							p.testimonials__list-item-preview Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.
 					- }
+				.row
 					.col-sm-4.m-t-30.col-sm-offset-4
 						a.btn(href="#!") 
 							img(src="img/spin.png", alt="spin")

@@ -1,14 +1,18 @@
 header.header
 	.container
 		.row
-			.col-sm-3
+			.col-sm-3.col-lg-2.col-xs-12
 				// лого
 				a.header__logo(href="/")
 					img(src="img/logo.png" alt="Site Logo")
 				// конец лого
-			.col-sm-5
+			.col-md-6.col-sm-1.col-xs-12
 				// меню
+				button.header__menu-mob-btn.visible-sm.visible-xs(type="button" collapse)
+					span.visible-xs Меню
 				.header__menu
+					// логотип для мобильного меню
+					img.visible-sm.visible-xs(style="padding: 13px;" src="img/logo.png", alt="menu logo")
 					ul.header__menu-list
 						each item, i in menu
 							li.header__menu-item
@@ -17,10 +21,12 @@ header.header
 								- } else {
 									a.header__menu-link(href="#!") #{item}
 								- }
+					.text-center
+						a.btn.header__mob-trigger(href="javascript:void(0);" collapse) Закрыть
 				// конец меню
-			.col-sm-4
+			.col-sm-8.col-md-3.col-lg-4.col-xs-12
 				// форма обратного звонка
-				.header__callback
+				.header__callback.hidden-md
 					form(action="#callback")
 						.header__callback-wrap
 							label.header__callback-label Номер Телефона
