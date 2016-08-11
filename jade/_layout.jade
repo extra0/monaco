@@ -3,10 +3,21 @@ include includes/_vars
 html(lang="ru")
 	include includes/_head
 	body
-		include includes/_modals
 		.main-wrapper
+			// шапка 
 			include includes/_header
-			.content
+			// конец шапка
+			// контент
+			.content.waves-bg
 				block content
 			.buffer
+			// конец контент
+		// футер
 		include includes/_footer
+		// конец футер
+		// модальные окна
+		include includes/_modals
+		// конец модальные окна
+		// подключаемые скрипты
+		include includes/_script
+		// конец подключаемые скрипты

@@ -25,11 +25,13 @@
 			.col-md-9.col-sm-12
 				.row
 					- for (i=1; i<=3; i++) {
-						.testimonials__list-item.col-sm-4.col-xxs-12.col-xs-4
-							img.testimonials__list-item-img(src="img/content/ava.jpg", alt="ava")
-							p.testimonials__list-item-name Маша Гаврилина
-							p.testimonials__list-item-city Одесса
-							p.testimonials__list-item-preview Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.
+						.testimonials__item.col-sm-4.col-xxs-12.col-xs-4
+							img.testimonials__item-img(src="img/content/ava-#{i%2 ? 1 : 2}.jpg", alt="ava")
+							p.testimonials__item-name Маша Гаврилина
+							.testimonials__item-rating
+								span.testimonials__item-rating-active
+							p.testimonials__item-city Одесса
+							p.testimonials__item-preview Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.
 					- }
 				.row
 					.col-sm-4.m-t-30.col-sm-offset-4

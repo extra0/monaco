@@ -53,7 +53,6 @@ $(function(){
 	});
 
 	$('.hotels-choose__map-dot').each(function(i){$(this).attr('data-index', i);}); // проставляем индексы на точки
-	$('.hotels-choose__map-dot[data-index='+ hSlider.getCurrentSlide() +']').addClass('active'); // активируем первую точку
 
 	// меняем слайды по клику на точки
 	$('.hotels-choose__map-dot').on('click', function(){

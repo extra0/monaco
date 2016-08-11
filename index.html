@@ -16,13 +16,13 @@
     <!-- End OpenGraph-->
     <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
     <link href="css/styles.css" rel="stylesheet" media="all">
-    <script src="js/jquery.js"></script>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>Главная страница</title>
   </head>
   <body>
     <div class="main-wrapper">
+      <!-- шапка -->
       <header class="header">
         <div class="container">
           <div class="row">
@@ -67,7 +67,9 @@
           </div>
         </div>
       </header>
-      <div class="content">
+      <!-- конец шапка-->
+      <!-- контент-->
+      <div class="content waves-bg">
         <!-- превью организации-->
         <div class="index-preview"><img src="img/logo-large.png" alt="Logo large">
           <div class="index-preview__text-wrap">
@@ -123,7 +125,7 @@
               </div>
               <div class="col-sm-8 col-md-9">
                 <div class="hotels-choose__map-holder"><img src="img/map.png" alt="map" class="hotels-choose__map-img hidden-sm hidden-xs">
-                  <div class="hotels-choose__map-dots hidden-sm hidden-xs"><a href="javascript:void(0);" style="top: 50px; right: 20px;" class="hotels-choose__map-dot"></a><a href="javascript:void(0);" style="top: 100px; right: 30px;" class="hotels-choose__map-dot"></a><a href="javascript:void(0);" style="top: 120px; right: 110px;" class="hotels-choose__map-dot"></a></div>
+                  <div class="hotels-choose__map-dots hidden-sm hidden-xs"><a href="javascript:void(0);" style="top: 50px; right: 20px;" class="hotels-choose__map-dot active"></a><a href="javascript:void(0);" style="top: 100px; right: 30px;" class="hotels-choose__map-dot"></a><a href="javascript:void(0);" style="top: 120px; right: 110px;" class="hotels-choose__map-dot"></a></div>
                 </div>
                 <div class="hotels-choose__slider-wrap">
                   <ul class="hotels-choose__slider">
@@ -348,20 +350,23 @@
               </div>
               <div class="col-md-9 col-sm-12">
                 <div class="row">
-                  <div class="testimonials__list-item col-sm-4 col-xxs-12 col-xs-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
-                    <p class="testimonials__list-item-name">Маша Гаврилина</p>
-                    <p class="testimonials__list-item-city">Одесса</p>
-                    <p class="testimonials__list-item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
+                  <div class="testimonials__item col-sm-4 col-xxs-12 col-xs-4"><img src="img/content/ava-1.jpg" alt="ava" class="testimonials__item-img">
+                    <p class="testimonials__item-name">Маша Гаврилина</p>
+                    <div class="testimonials__item-rating"><span class="testimonials__item-rating-active"></span></div>
+                    <p class="testimonials__item-city">Одесса</p>
+                    <p class="testimonials__item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
                   </div>
-                  <div class="testimonials__list-item col-sm-4 col-xxs-12 col-xs-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
-                    <p class="testimonials__list-item-name">Маша Гаврилина</p>
-                    <p class="testimonials__list-item-city">Одесса</p>
-                    <p class="testimonials__list-item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
+                  <div class="testimonials__item col-sm-4 col-xxs-12 col-xs-4"><img src="img/content/ava-2.jpg" alt="ava" class="testimonials__item-img">
+                    <p class="testimonials__item-name">Маша Гаврилина</p>
+                    <div class="testimonials__item-rating"><span class="testimonials__item-rating-active"></span></div>
+                    <p class="testimonials__item-city">Одесса</p>
+                    <p class="testimonials__item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
                   </div>
-                  <div class="testimonials__list-item col-sm-4 col-xxs-12 col-xs-4"><img src="img/content/ava.jpg" alt="ava" class="testimonials__list-item-img">
-                    <p class="testimonials__list-item-name">Маша Гаврилина</p>
-                    <p class="testimonials__list-item-city">Одесса</p>
-                    <p class="testimonials__list-item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
+                  <div class="testimonials__item col-sm-4 col-xxs-12 col-xs-4"><img src="img/content/ava-1.jpg" alt="ava" class="testimonials__item-img">
+                    <p class="testimonials__item-name">Маша Гаврилина</p>
+                    <div class="testimonials__item-rating"><span class="testimonials__item-rating-active"></span></div>
+                    <p class="testimonials__item-city">Одесса</p>
+                    <p class="testimonials__item-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deserunt nihil libero ipsa pariatur consequatur impedit perferendis, aspernatur a blanditiis.</p>
                   </div>
                 </div>
                 <div class="row">
@@ -374,7 +379,9 @@
         <!-- конец отзывы-->
       </div>
       <div class="buffer"></div>
+      <!-- конец контент-->
     </div>
+    <!-- футер-->
     <footer class="footer">
       <div class="container">
         <div class="footer__top">
@@ -418,7 +425,13 @@
         </div>
       </div>
     </footer>
+    <!-- конец футер-->
+    <!-- модальные окна-->
+    <!-- конец модальные окна-->
+    <!-- подключаемые скрипты-->
+    <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/plugins.js" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
+    <!-- конец подключаемые скрипты-->
   </body>
 </html>

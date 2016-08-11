@@ -1,12 +1,14 @@
 .text-center {text-align: center;}
 .text-right {text-align: right;}
 
+.m-t-5 {margin-top: 5px;}
 .m-t-10 {margin-top: 10px;}
 .m-t-15 {margin-top: 15px;}
 .m-t-20 {margin-top: 20px;}
 .m-t-25 {margin-top: 25px;}
 .m-t-30 {margin-top: 30px;}
 
+.m-b-5 {margin-bottom: 5px;}
 .m-b-10 {margin-bottom: 10px;}
 .m-b-15 {margin-bottom: 15px;}
 .m-b-20 {margin-bottom: 20px;}
@@ -40,6 +42,13 @@
 		font-size: 20px;
 		margin-bottom: -11px;
 	}
+}
+.page-title {
+	font-size: 40px;
+	margin: 0 0 20px 0;
+	text-transform: uppercase;
+	color: #342927;
+	font-weight: bold;
 }
 
 // фон с волнами
@@ -194,4 +203,19 @@
 }
 #testimonial-window {
 	width: 570px;
+}
+.flex {
+	&-section {
+		@include display(flex);
+	}
+	&-block {
+		margin-bottom: 15px;
+	}
+}
+
+
+.border-panel {
+	border: 1px solid #f2f2f2;
+	padding: 30px;
+	background: #fff;
 }

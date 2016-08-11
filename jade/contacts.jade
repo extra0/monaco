@@ -1,0 +1,52 @@
+extends _layout
+block append head
+	- title = 'Контакты'
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title #{title}
+block content
+	.container.p-lg-100
+		include includes/modules/breadcrumbs
+		.row
+			.flex-section.flex-sm-wrap.flex-xs-wrap
+				.flex-block.col-sm-12.col-md-7.col-xs-12
+					h2.page-title Контакты
+					.contact__block.border-panel
+						.row
+							// адрес
+							.col-sm-5
+								.contact__block-inner
+									p.contact__block-title Москва
+									p.contact__block-text 
+										img.contact__block-img(src="img/metro.png", alt="contact-img")
+										span Пушкинская
+									p.contact__block-text 
+										img.contact__block-img(src="img/marker.png", alt="contact-img")
+										span Трехпрудный переулок, Дом 4, Строение 1, Офис 202
+									p.contact__block-text 
+										img.contact__block-img(src="img/c-phone.png", alt="contact-img")
+										span +7 (495) 740 23 30
+									p.contact__block-text 
+										img.contact__block-img(src="img/email.png", alt="contact-img")
+										span info@monako.ru
+							// конец адрес
+							// форма вопроса
+							.col-sm-7
+								form(action="#!")
+									.form-group
+										label.form-label Имя
+										input.form-control(type="text" required value="Жан Клод")
+									.form-group
+										label.form-label Email
+										input.form-control(type="email" required value="jancloud@gmail.com")
+									.form-group
+										label.form-label Вопрос
+										textarea.form-control(rows="5" required)
+									.form-group
+										button.btn.btn-block(type="submit") Задать вопрос		
+							// конец форма вопроса							
+				.flex-block.col-sm-12.col-md-5.col-xs-12
+					h2.page-title Карта
+					.contact__block.border-panel
+						.contact__map-wrap
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=JtHgps72LNUomrDeFLWXoNu1z1zTS-t3&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
