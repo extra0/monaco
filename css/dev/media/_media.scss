@@ -217,6 +217,16 @@
 			}
 		}
 	}
+	.title {
+		font-size: 34px;
+		* {
+			font-size: 16px;
+			margin-bottom: -7px;
+		}
+	}
+	.border-panel {
+		padding: 15px;
+	}
 }
 @media (max-width: 499px) {
 	#testimonial-window {

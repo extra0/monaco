@@ -1,0 +1,24 @@
+extends _layout
+block append head
+	- title = 'Услуги подкатегория'
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title #{title}
+block content
+	.container.p-lg-125
+		include includes/modules/breadcrumbs
+		.text-center
+			h2.title
+				span Аренда
+				| Транспорта
+		.flex-section.flex-all-wrap.justify-center.row.m-t-30
+			- for (i=1; i<=5; i++) {
+				.col-sm-6.col-md-4
+					.flex-block.service__block
+						a(href="#!")
+							.service__block-img-wrap
+								img.service__block-bg(src="img/tr-#{i}.jpg", alt="bg")
+							.service__block-text-wrap
+								p.service__block-text-title Яхты и катера
+								p.service__block-text Спорткар, яхта, вертолет? Может Лирджет или подводную лодку? Мы можем организовать все что угодно. 
+			-}
