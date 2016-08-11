@@ -362,7 +362,7 @@
 }
 
 
-.testimonials {
+Чтоtestimonials {
 	padding: 75px 0 35px 0;
 	&__item {
 		margin: 6px 0 16px 0;
@@ -695,6 +695,37 @@
 		    float: right;
 		    margin-right: 10px;
 		    @include transition(all 0.2s ease-in-out);
+		}
+	}
+}
+
+.place {
+	&__block {
+		background: #fff;
+		border: 1px solid #e6e6e6;
+		text-align: center;
+		@include transition(all 0.2s ease-in-out);
+		margin-bottom: 30px;
+		&:hover {
+			border: 1px solid #e09d78;
+			box-shadow: 0px 0px 2px #e09d78
+		}
+		&-section {
+			margin-bottom: 30px;
+		}
+		a {
+			&:focus,
+			&:hover {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+		&-name {
+			color: #2b2f38;
+			margin: 0;
+			padding: 30px 0;
+			font-size: 18px;
+			text-transform: uppercase;
 		}
 	}
 }

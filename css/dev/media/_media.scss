@@ -210,6 +210,13 @@
 			}
 		}
 	}
+	.place {
+		&__block {
+			&-name {
+				font-size: 16px;
+			}
+		}
+	}
 }
 @media (max-width: 499px) {
 	#testimonial-window {
@@ -286,6 +293,15 @@
 				&:last-child {
 					padding: 10px 10px 20px 10px!important;
 				}
+			}
+		}
+	}
+	.place {
+		&__block {
+			max-width: 350px;
+			margin: 0 auto 20px auto;
+			&-name {
+				font-size: 14px;
 			}
 		}
 	}
@@ -471,6 +487,13 @@
 		&__rating {
 			&-block {
 				margin: -10px 10px 20px 10px;
+			}
+		}
+	}
+	.place {
+		&__block {
+			&-img {
+				width: 100%;
 			}
 		}
 	}
@@ -724,6 +747,13 @@
 			}
 		}
 	}
+	.place {
+		&__block {
+			&-img {
+				width: 100%;
+			}
+		}
+	}
 }
 @media (min-width: 1800px) {
 	.container {
@@ -744,7 +774,7 @@
 	.contact__block-inner {
 		margin: 0 20px;
 	}
-	.p-lg-100 {
-		padding: 0 100px;
+	.p-lg-125 {
+		padding: 0 125px;
 	}
 }

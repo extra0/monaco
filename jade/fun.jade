@@ -1,0 +1,47 @@
+extends _layout
+block append head
+	- title = 'Что посетить'
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title #{title}
+block content
+	.container.p-lg-125
+		include includes/modules/breadcrumbs
+		.text-center
+			h2.title
+				span Что стоит
+				| Посетить?
+		.text-center
+			h3.page-title.m-t-30 Театры
+		// список 
+		.place__block-section
+			.row
+				- for (i=1;i<=4; i++) {
+					.col-sm-6.col-md-3.col-xs-6.col-xxs-12
+						.place__block
+							a(href="#!")
+								img.place__block-img(src="img/content/place-#{i}.jpg", alt="place")
+								p.place__block-name sun grande le bla
+				- }
+		// конец список
+		.text-center.m-b-30
+			a.btn(href="#!") показать еще
+	hr
+	.container.p-lg-125
+		.text-center
+			h3.page-title.m-t-30 Рестораны
+		// список 
+		.place__block-section
+			.row
+				- for (i=1;i<=4; i++) {
+					.col-sm-6.col-md-3.col-xs-6.col-xxs-12
+						.place__block
+							a(href="#!")
+								img.place__block-img(src="img/content/place-#{5-i}.jpg", alt="place")
+								p.place__block-name sun grande le bla
+				- }
+		// конец список
+		.text-center
+			a.btn(href="#!") показать еще
+		br
+		br
