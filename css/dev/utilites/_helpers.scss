@@ -211,6 +211,12 @@
 	&-block {
 		margin-bottom: 15px;
 	}
+	&-all-wrap {
+		@include flex-wrap(wrap);
+	}
+}
+.justify-center {
+	@include justify-content(center);
 }
 
 
