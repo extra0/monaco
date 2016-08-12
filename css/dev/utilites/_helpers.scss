@@ -51,6 +51,14 @@
 	font-weight: bold;
 }
 
+.page-subtitle {
+	color: #342927;
+	font-size: 25px;
+	margin: 0 0 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
 // фон с волнами
 .waves-bg {
 	background: url(../img/waves.png) 0 0 repeat-x;
@@ -60,6 +68,7 @@
 .btn {
 	border: none;
 	background: none;
+	text-align: center;
 	@include transition(all 0.2s ease-in-out);
 	border-radius: $br;
 	background-color: #29dbef;
@@ -75,7 +84,6 @@
 	&:focus {
 		text-decoration: none;
 		color: #fff;
-		text-transform: uppercase;
 		opacity: 0.9;
 		img {
 			animation: spin 2s linear infinite;
@@ -95,6 +103,18 @@
 	&-block {
 		display: block;
 		width: 100%;
+	}
+	&-default {
+		background: #fff;
+		color: #342927;
+		border: 2px solid #e1dcdb;
+		padding: 8px 13px;
+		&:before {
+			display: none;
+		}
+		&:hover {
+			background: #e1dcdb;
+		}
 	}
 	img {
 		display: inline-block;
@@ -224,4 +244,14 @@
 	border: 1px solid #f2f2f2;
 	padding: 30px;
 	background: #fff;
+}
+
+// table 
+table:not([class]) {
+	width: 100%;
+	margin: 10px 0;
+	td, th {
+		border: 1px solid #342927;
+		padding: 3px 5px;
+	}
 }

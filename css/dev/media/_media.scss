@@ -1,4 +1,8 @@
 @media (max-width: 767px) {
+	.sm-text-center {text-align: center!important;}
+	.sm-text-left {text-align: left!important;}
+	.sm-text-right {text-align: right!important;}
+
 	.header {
 		text-align: center;
 		padding: 0 0 24px;
@@ -227,8 +231,28 @@
 	.border-panel {
 		padding: 15px;
 	}
+	.item {
+		&__section {
+			margin: 30px 0 0 0;
+			@include justify-content(space-between);
+		}
+		&__block {
+			flex-basis: 48%;
+			margin: 0 0 30px 0;
+			&-description {
+				padding: 0px 15px 15px 15px;
+				&-name,
+				&-price {
+					font-size: 16px;
+				}
+			}
+		}	
+	}
 }
 @media (max-width: 499px) {
+	.xxs-text-center {text-align: center!important;}
+	.xxs-text-left {text-align: left!important;}
+	.xxs-text-right {text-align: right!important;}
 	#testimonial-window {
 		width: 100%;
 	}
@@ -314,6 +338,12 @@
 				font-size: 14px;
 			}
 		}
+	}
+	.item {
+		&__block {
+			flex-basis: 100%;
+			margin: 0 auto 20px auto;
+		}	
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -507,6 +537,18 @@
 			}
 		}
 	}
+	.item {
+		&__block {
+			flex-basis: 40%;
+			&-description {
+				padding: 0 15px 15px 15px;
+				&-name,
+				&-price {
+					font-size: 16px;
+				}
+			}
+		}
+	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.header {
@@ -623,6 +665,11 @@
 			&-block {
 				margin: -10px 10px 20px 10px;
 			}
+		}
+	}
+	.item {
+		&__block {
+			flex-basis: 43%;
 		}
 	}
 }

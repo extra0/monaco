@@ -362,7 +362,7 @@
 }
 
 
-Чтоtestimonials {
+.testimonials {
 	padding: 75px 0 35px 0;
 	&__item {
 		margin: 6px 0 16px 0;
@@ -727,6 +727,54 @@
 			font-size: 18px;
 			text-transform: uppercase;
 		}
+
+		&-ext {
+			max-width: 350px;
+			margin: 0 auto 30px auto;
+			position: relative;
+			text-align: center;
+			@include transition(all 0.2s ease-in-out);
+			&:hover {
+				box-shadow: 0px 0px 9px #e09d78;
+			}
+			a {
+				color: inherit;
+				&:focus,
+				&:hover {
+					text-decoration: none;
+					color: inherit;
+				}
+			}
+			&-img {
+				
+			}
+			&-info {
+				@include display(flex);
+				@include position(absolute, 0 0 0 0);
+				@include justify-content(center);
+				@include align-items(center);
+				@include align-content(center);
+				@include flex-wrap(wrap);
+				width: 100%;
+				height: 100%;
+				&-img {
+					margin-bottom: 25px;
+					padding: 0 70px;
+				}
+				&-title {
+					flex-basis: 100%;
+					font-size: 18px;
+					color: #fff;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					margin: 0;
+				}
+			}
+			&-btn {
+				max-width: 350px;
+				margin: 0 auto;
+			}
+		}
 	}
 }
 
@@ -798,6 +846,80 @@
 
 .wysiwyg {
 	&__block {
-		
+		@include clearfix;
+		color: #342927;
+		p {
+			margin: 0 0 10px 0;
+		}
+		img {
+			margin: 10px;
+			&[align="left"] {
+				margin: 0 20px 20px 0;
+			}
+			&[align="right"] {
+				margin: 0 0 20px 20px;
+			}
+		}
+		a {
+			color: #342927;
+			border-bottom: 1px solid rgba(52, 41, 39, 0.52);
+			&:focus,
+			&:hover {
+				border-bottom: 1px solid transparent;
+				text-decoration: none;
+				color: #342927;
+			}
+		}
+	}
+}
+
+
+.item {
+	&__section {
+		@include display(flex);
+		@include flex-wrap(wrap);
+		@include justify-content(center);
+		margin: 30px -35px 0 -35px;
+	}
+	&__block {
+		flex-basis: 28%;
+		margin: 0 20px 40px 20px;
+		max-width:350px;
+		border: 1px solid #e5e5e5;
+		@include transition(all 0.2s ease-in-out);
+		&:hover {
+		    border: 1px solid #e09d78;
+		    box-shadow: 0px 0px 2px #e09d78;
+		}
+		a {
+			color: inherit;
+			text-decoration: none;
+			&:focus,
+			&:hover {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+		&-description {
+			padding: 0px 10px 25px 30px;
+			margin-top: -27px;
+			&-price {
+				margin: 0 0 14px;
+				padding: 13px 15px;
+				font-weight: bold;
+				font-size: 18px;
+				text-transform: none;
+			}
+			&-name {
+				color: #2b2f38;
+				margin: 0 0 7px;
+				font-size: 18px;
+				letter-spacing: 1.7px;
+				text-transform: uppercase;
+			}
+			&-date {
+
+			}
+		}
 	}
 }
