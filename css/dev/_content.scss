@@ -891,6 +891,16 @@
 		    border: 1px solid #e09d78;
 		    box-shadow: 0px 0px 2px #e09d78;
 		}
+		&.item__block-ext {
+			margin: 0 0 30px 0;
+			max-width: 350px;
+		}
+		&-room {
+			border: 1px solid #e5e5e5;
+			margin: 0 auto 30px auto;
+			max-width: 350px;
+			background: #fff;
+		}
 		a {
 			color: inherit;
 			text-decoration: none;
@@ -925,6 +935,53 @@
 				color: #adaaaa;
 				font-size: 16px;
 			}
+			&-type {
+				margin: 0;
+				font-size: 18px;
+				color: #2b2f38;
+			}
+		}
+	}
+	&__service {
+		margin-bottom: 45px;
+		position: relative;
+		&-wrap {
+			margin: 0 auto;
+			max-width: 350px;
+		}
+		&:last-child {
+			margin-bottom: 25px;
+		}
+		&-img {
+			@include position(absolute, -6px null null 10px);
+		}
+		&-text {
+			margin: 15px 0 0 0;
+			font-size: 18px;
+			letter-spacing: 2px;
+			padding-left: 67px;
+		}
+	}
+	&__slider {
+		&-wrap {
+			padding: 0 70px;
+			.bx-wrapper .bx-controls-direction a {
+				width: 70px;
+				height: 70px;
+				margin-top: -45px;
+			}
+			.bx-wrapper .bx-prev {
+				left: -80px
+			}
+			.bx-wrapper .bx-next {
+				right: -80px
+			}
+			.item__block {
+				margin: 0;
+			}
+		}
+		&-cell {
+
 		}
 	}
 }

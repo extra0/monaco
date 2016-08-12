@@ -246,6 +246,26 @@
 					font-size: 16px;
 				}
 			}
+			&.item__block-ext {
+				margin: 0 auto 30px auto;
+			}
+		}
+		&__slider {
+			&-wrap {
+				padding: 0 40px;
+				.bx-wrapper .bx-controls-direction a {
+					width: 40px;
+					height: 40px;
+					margin-top: -30px;
+					background-size: 100%;
+				}
+				.bx-wrapper .bx-prev {
+					left: -45px;
+				}
+				.bx-wrapper .bx-next {
+					right: -45px;
+				}
+			}
 		}	
 	}
 }
@@ -540,12 +560,21 @@
 	.item {
 		&__block {
 			flex-basis: 40%;
+			max-width: 300px;
 			&-description {
 				padding: 0 15px 15px 15px;
 				&-name,
 				&-price {
 					font-size: 16px;
 				}
+			}
+		}
+		&__service {
+			&-text {
+				padding-left: 57px;
+			}
+			&-img {
+				left: 0;
 			}
 		}
 	}
@@ -808,6 +837,13 @@
 		&__block {
 			&-img {
 				width: 100%;
+			}
+		}
+	}
+	.item {
+		&__block {
+			&.item__block-ext {
+				margin: 0 10px 30px 10px;
 			}
 		}
 	}

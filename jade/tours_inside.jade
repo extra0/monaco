@@ -1,0 +1,54 @@
+extends _layout
+block append head
+	- title = 'Внутренняя тура'
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title #{title}
+block content
+	.container.p-lg-125
+		include includes/modules/breadcrumbs
+		.border-panel
+			.row
+				// название тура
+				.col-sm-5.col-md-4.m-b-20
+					h2.title 
+						span Тур
+						| в Монако
+						span от €13,099
+				// конец название тура
+				// описание тура
+				.col-sm-7.col-md-8
+					.wysiwyg__block
+						p Спорткар, яхта, вертолет?  Может Лирджет или подводную лодку? Мы можем организовать все что угодно. 
+						p Не открывая глаз, по потрогал кожаный квадратик, висевший на ключах — на его старой, потертой поверхности были выжжены инициалы «Р.Д.Л.». Он не собирался искать ни нового кольца для ключей, ни нового куска кожи, чтобы выдавить на нем собственные инициалы.
+					a.btn.m-t-20.m-b-30(href="#!") Заказать
+				// конец описание тура
+			// галерея тура
+			.p-t-30
+				.row
+					- for (i=1;i<=3;i++) {
+						.col-sm-4.m-b-10.text-center.col-xs-4.col-xxs-12
+							a(href="img/service-#{4-i}.jpg" fancybox rel="gallery")
+								img(src="img/service-#{4-i}.jpg", alt="img")
+					-}
+			// конец галерея тура
+		.p-t-30.m-t-20
+			.row
+				.col-sm-6.col-xs-6.col-xxs-12.xxs-text-center
+					h3.page-subtitle Другие туры
+				.col-sm-6.text-right.col-xs-6.hidden-xxs
+					a.btn.btn-default(href="#!") Показать все
+			.row
+				.col-sm-12.col-xs-12
+					.item__slider-wrap
+						ul.item__slider
+							- for (i=1;i<=8; i++) {
+								li.item__slider-cell
+									.item__block
+										a(href="#!")
+											img.item__block-img(src="img/content/hotel-preview.jpg", alt="hotel")
+											.item__block-description
+												p.item__block-description-price.btn €#{i*3},999
+												p.item__block-description-name lorem ipsum
+												p.item__block-description-date 7 дней
+							- }

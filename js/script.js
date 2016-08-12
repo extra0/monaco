@@ -27,6 +27,25 @@ $(function(){
 		mode: 'fade'
 	});
 
+	// слайдер туров и отелей
+	var maxSlides = 0;
+	if ($(window).width() >= 768 && $(window).width() <= 991) {
+		maxSlides = 2;
+	} else if ($(window).width() < 768) {
+		maxSlides = 1;
+	} else {
+		maxSlides = 4;
+	}
+
+	var itemSlider = $('.item__slider').bxSlider({
+		pager: false,
+		slideWidth: 350,
+		maxSlides: maxSlides,
+		minSlides: maxSlides,
+		slideMargin: 10,
+		adaptiveHeight: true
+	});
+
 	// слайдер отелей
 	var hSlider = $('.hotels-choose__slider').bxSlider({
 		pager: false,

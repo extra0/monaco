@@ -1,0 +1,79 @@
+extends _layout
+block append head
+	- title = 'Отели внутренняя'
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title #{title}
+block content
+	.container.p-lg-125
+		include includes/modules/breadcrumbs
+		.row
+			// часть контента
+			.col-lg-9.col-sm-8.m-b-30.p-b-30
+				h2.title
+					span Отель
+					| Le bla ipsum
+				block repeat
+					.border-panel.m-t-30.m-b-30
+						.wysiwyg__block
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa eligendi aut numquam illum assumenda ab omnis nemo itaque nesciunt quae fugit, unde ullam quaerat, accusamus provident impedit, non harum aspernatur.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa eligendi aut numquam illum assumenda ab omnis nemo itaque nesciunt quae fugit, unde ullam quaerat, accusamus provident impedit, non harum aspernatur.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam id labore aliquam explicabo eum cum eveniet ratione doloremque, nesciunt praesentium, ad illum sit. Totam ipsa distinctio numquam accusamus et quae sunt provident praesentium, soluta minima iure odit repellendus veritatis est quia eius dolor, molestiae cumque dolore natus ratione aperiam quidem officia sed! Officia sit provident, optio, fugiat ex tenetur porro. Atque deleniti maxime voluptatibus repellendus ad, quaerat quas alias odio eius. Corrupti illo error, necessitatibus quam. Autem asperiores sed perferendis nulla, dignissimos nobis incidunt voluptate quaerat assumenda numquam ipsa, distinctio quo possimus atque soluta. Aliquid, dolorem minima quasi cum rerum.
+						.m-t-30
+							.row
+								- for (i=1;i<=3;i++) {
+									.col-sm-4.m-b-10.text-center.col-xs-4.col-xxs-12
+										a(href="img/service-#{4-i}.jpg" fancybox rel="gallery")
+											img(src="img/service-#{4-i}.jpg", alt="img")
+								-}
+				p.page-subtitle Люкс номер
+				block repeat
+			// конец часть контента
+			// сайдбар
+			.col-lg-3.col-sm-4.m-b-30
+				h3.page-subtitle.sm-text-center Номера
+				// список номеров
+				.p-b-20
+					.row
+						- for (i=1;i<=3;i++) {
+							.col-sm-12.col-xs-6.col-xxs-12
+								.item__block-room
+									img.item__block-img(src="img/content/room.jpg", alt="hotel")
+									.item__block-description
+										p.item__block-description-price.btn €#{i*399}
+										p.item__block-description-type Полулюкс
+						-}
+				// конец список номеров
+				h3.page-subtitle.sm-text-center Удобства
+				.border-panel.item__service-wrap
+					.item__service
+						img.item__service-img(src="img/parking.png", alt="")
+						p.item__service-text Парковка
+					.item__service
+						img.item__service-img(src="img/wifi.png", alt="")
+						p.item__service-text Wi-Fi
+					.item__service
+						img.item__service-img(src="img/swim.png", alt="")
+						p.item__service-text Бассейн
+					.item__service
+						img.item__service-img(src="img/beach.png", alt="")
+						p.item__service-text Вид на пляж
+			// конец сайдбар
+		// другие отели
+		.row
+			.col-sm-6.col-xs-6.col-xxs-12.xxs-text-center
+				h3.page-subtitle Другие отели
+			.col-sm-6.text-right.col-xs-6.hidden-xxs
+				a.btn.btn-default(href="#!") Показать все
+		.row
+			- for (i=1;i<=4; i++) {
+				.col-sm-6.col-md-3.col-xs-6.col-xxs-12
+					.item__block.item__block-ext
+						a(href="#!")
+							img.item__block-img(src="img/content/hotel-preview.jpg", alt="hotel")
+							.item__block-description
+								p.item__block-description-price.btn От €#{i},999
+								p.item__block-description-name sun grande le bla
+								.testimonials__item-rating
+									.testimonials__item-rating-active
+			-}
