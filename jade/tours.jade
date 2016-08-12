@@ -1,0 +1,41 @@
+extends _layout
+block append head
+	- title = 'Туры'
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title #{title}
+block content
+	.container.p-lg-125
+		include includes/modules/breadcrumbs
+		.row
+			// часть контента
+			.col-lg-9.col-sm-8.m-b-30.p-b-30
+				h2.title Туры
+				.item__section
+					- for (i=1;i<=9; i++) {
+						.item__block
+							a(href="#!")
+								img.item__block-img(src="img/content/hotel-preview.jpg", alt="hotel")
+								.item__block-description
+									p.item__block-description-price.btn €#{i},999
+									p.item__block-description-name lorem ipsum
+									p.item__block-description-date 7 дней
+					-}
+			// конец часть контента
+			// сайдбар
+			.col-lg-3.col-sm-4.m-b-30
+				h3.page-subtitle.sm-text-center Другие услуги
+				// список других мест
+				.row
+					- for (i=1;i<=3; i++) {
+						.col-sm-12.col-xs-6.col-xxs-12
+							.place__block-ext
+								a(href="#")
+									img.place__block-ext-img(src="img/content/s-service.jpg", alt="img")
+									.place__block-ext-info
+										img.place__block-ext-info-img(src="img/service-#{i}.png", alt="img")
+										p.place__block-ext-info-title Транспорт
+					- }
+				// конец список других мест
+				a.btn.btn-block.place__block-ext-btn(href="#!") Показать все
+			// конец сайдбар

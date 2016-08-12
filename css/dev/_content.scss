@@ -909,6 +909,9 @@
 				font-weight: bold;
 				font-size: 18px;
 				text-transform: none;
+				&:hover {
+					opacity: 1;
+				}
 			}
 			&-name {
 				color: #2b2f38;
@@ -918,7 +921,9 @@
 				text-transform: uppercase;
 			}
 			&-date {
-
+				margin: 0;
+				color: #adaaaa;
+				font-size: 16px;
 			}
 		}
 	}
