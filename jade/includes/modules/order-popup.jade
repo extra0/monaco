@@ -1,0 +1,17 @@
+.modal#order
+	form(action="#!")
+		button.modal__close(type="button")
+		.modal__header
+			h3.modal__header-title Новый заказ
+		.modal__body
+			.form-group
+				label.form-label Имя
+				input.form-control(type="text" required)
+			.form-group
+				label.form-label Телефон
+				input.form-control(type="tel" required only-numbers)
+			.form-group
+				label.form-label Ваш комментарий
+				input.form-control(type="text" required)
+		.modal__footer
+			button.btn.modal__footer-btn(type="submit") Заказать

@@ -63,6 +63,46 @@ $(function(){
 	  	}
 	});
 
+	// фильтрация отелей по категориям
+	$('.hotels-choose__filter-list-trigger').click(function(e){
+		e.preventDefault();
+		var category = event.target.getAttribute('data-category');
+
+		$('.hotels-choose__slider-item').removeClass('slshow');
+		$('.hotels-choose__slider-item[data-'+ category +'').each(function(){
+			$(this).addClass('slshow');
+		});	
+
+		$('.hotels-choose__map-dot').removeClass('active');
+		$('.hotels-choose__map-dot[data-index='+ hSlider.getCurrentSlide() +']').addClass('active');
+
+		hSlider.reloadSlider({
+			pager: false,
+			infiniteLoop: false,
+			adaptiveHeight: true,
+			hideControlOnEnd: true,
+
+			onSliderLoad: function(currentIndex) {
+				if (category == 'all') {
+					$('.hotels-choose__slider-item').show();
+				} else {
+					$('.hotels-choose__slider-item').hide();
+					$('.hotels-choose__slider-item[data-'+ category +'').each(function(){
+						$(this).show();
+					});	
+				}
+				console.log(hSlider.getCurrentSlide());
+			},
+
+			onSlideBefore: function($slideElement) {
+
+			},
+			slideSelector:'li.hotels-choose__slider-item.slshow'
+
+		});
+	});
+
+
 	// меняем активные состояния кнопок фильтра
 	$('.hotels-choose__filter-list-trigger').on('click', function(){
 		$('.hotels-choose__filter-list-trigger').removeClass('active');

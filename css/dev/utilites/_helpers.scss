@@ -226,6 +226,10 @@
 }
 #testimonial-window {
 	width: 570px;
+	min-width: 280px;
+}
+#order {
+	@extend #testimonial-window;
 }
 .flex {
 	&-section {
