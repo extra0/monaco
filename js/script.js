@@ -63,42 +63,39 @@ $(function(){
 	  	}
 	});
 
+
 	// фильтрация отелей по категориям
 	$('.hotels-choose__filter-list-trigger').click(function(e){
 		e.preventDefault();
-		var category = event.target.getAttribute('data-category');
+		var category = event.target.getAttribute('data-category'),
+			slideIndex = $('.active-slide').index();
 
-		$('.hotels-choose__slider-item').removeClass('slshow');
-		$('.hotels-choose__slider-item[data-'+ category +'').each(function(){
-			$(this).addClass('slshow');
-		});	
-
+		$('.hotels-choose__slider-item').show();
 		$('.hotels-choose__map-dot').removeClass('active');
-		$('.hotels-choose__map-dot[data-index='+ hSlider.getCurrentSlide() +']').addClass('active');
+		$('.hotels-choose__slider-item').removeClass('active-slide slshow');
+		$('.hotels-choose__slider-item[data-' + category + ']').addClass('slshow');
+		e.preventDefault();
+		$('li.hotels-choose__slider-item').not('.slshow').hide();
+		$('li.hotels-choose__slider-item').removeClass('active-slide');
+		$('li.hotels-choose__slider-item.slshow:first').addClass('active-slide');
 
 		hSlider.reloadSlider({
 			pager: false,
 			infiniteLoop: false,
 			adaptiveHeight: true,
 			hideControlOnEnd: true,
-
 			onSliderLoad: function(currentIndex) {
-				if (category == 'all') {
-					$('.hotels-choose__slider-item').show();
-				} else {
-					$('.hotels-choose__slider-item').hide();
-					$('.hotels-choose__slider-item[data-'+ category +'').each(function(){
-						$(this).show();
-					});	
-				}
-				console.log(hSlider.getCurrentSlide());
+				// $('.hotels-choose__slider-wrap').find('.bx-viewport').find('ul').children().eq(0).addClass('active-slide');
+				$('li.hotels-choose__slider-item').not('.slshow').hide();
+				$('.hotels-choose__map-dot[data-index='+ (slideIndex+1) +']').addClass('active');
 			},
-
 			onSlideBefore: function($slideElement) {
-
+				$('.hotels-choose__slider-wrap').find('.bx-viewport').find('ul').children().removeClass('active-slide');
+				$slideElement.addClass('active-slide');
+				$('.hotels-choose__map-dot').removeClass('active');
+		    	$('.hotels-choose__map-dot[data-index='+ hSlider.getCurrentSlide() +']').addClass('active');
 			},
 			slideSelector:'li.hotels-choose__slider-item.slshow'
-
 		});
 	});
 
