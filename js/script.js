@@ -71,13 +71,21 @@ $(function(){
 		$('.hotels-choose__map-dot[data-category='+ $(this).attr('data-category') +']').hide();
 	});
 
-	$('.hotels-choose__map-dot').each(function(i){$(this).attr('data-index', i);}); // проставляем индексы на точки
+	$('.hotels-choose__map-dot, .tabs__items-link').each(function(i){$(this).attr('data-index', i);}); // проставляем индексы
+	$('.tabs__content-item').each(function(i){$(this).attr('data-index', i);}); // проставляем индексы
 
 	// меняем слайды по клику на точки
 	$('.hotels-choose__map-dot').on('click', function(){
 		$('.hotels-choose__map-dot').removeClass('active');
 		$(this).addClass('active');
 		hSlider.goToSlide(parseInt($(this).attr('data-index')));
+	});
+
+	// табы
+	$('.tabs__items-link').on('click', function(){
+		$('.tabs__items-link, .tabs__content-item').removeClass('active');
+		$(this).addClass('active');
+		$('.tabs__content-item[data-index='+ $(this).attr('data-index') +']').addClass('active');
 	});
 
 
@@ -92,5 +100,16 @@ $(function(){
 			collapse.removeClass('active');
 		}
 	});
+
+
+	if ($(window).width() < 768) {
+		$('.tabs__items-link').bind("click", function(e) {
+			var anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $(anchor.attr('data-index')).offset().top
+			}, 1000);
+			e.preventDefault();
+		});
+	}
 
 });

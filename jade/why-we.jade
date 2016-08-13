@@ -1,0 +1,120 @@
+extends _layout
+block append head
+	- title = 'Почему мы?'
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title #{title}
+block content
+	.container.p-lg-125
+		include includes/modules/breadcrumbs
+		.text-center
+			h2.title
+				span почему
+				| мы лучше?
+		// табы
+		.tabs
+			.tabs__items
+				a.tabs__items-link.active(href="javascript:void(0);")
+					.tabs__items-block
+						img.tabs__items-img(src="img/tab-1.png", alt="")
+						p.tabs__items-name сделано руками, а не роботом
+				a.tabs__items-link(href="javascript:void(0);")
+					.tabs__items-block
+						img.tabs__items-img(src="img/tab-2.png", alt="")
+						p.tabs__items-name Будет интересно
+				a.tabs__items-link(href="javascript:void(0);")
+					.tabs__items-block
+						img.tabs__items-img(src="img/tab-3.png", alt="")
+						p.tabs__items-name гарантия лучшей цены
+				a.tabs__items-link(href="javascript:void(0);")
+					.tabs__items-block
+						img.tabs__items-img(src="img/tab-4.png", alt="")
+						p.tabs__items-name Любые формы оплаты
+				a.tabs__items-link(href="javascript:void(0);")
+					.tabs__items-block
+						img.tabs__items-img(src="img/tab-5.png", alt="")
+						p.tabs__items-name Поддержка 24/7
+			.tabs__content
+				// таб 1
+				.tabs__content-item.active
+					.row
+						.col-sm-6.m-b-20
+							img.tabs__content-item-img(src="img/content/tab.jpg", alt="")
+						.col-sm-6.m-b-20
+							h3.title.m-b-20
+								span Сделано руками
+								| а не роботом
+							.wysiwyg__block
+								p Вы получаете индивидуальный подход и можете в любой момент внести абсолютно любые изменение в свое путешествие.
+								p Не открывая глаз, по потрогал кожаный квадратик, висевший на ключах — на его старой, потертой поверхности были выжжены инициалы «Р.Д.Л.». Он не собирался искать ни нового кольца для ключей, ни нового куска кожи, чтобы выдавить на нем собственные инициалы.
+				// конец таб 1
+				// таб 2
+				.tabs__content-item
+					.row
+						.col-sm-6.m-b-20
+							img.tabs__content-item-img(src="img/content/tab.jpg", alt="")
+						.col-sm-6.m-b-20
+							h3.title.m-b-20
+								span Будет
+								| интересно
+							.wysiwyg__block
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis excepturi nostrum odit a consequatur aspernatur totam, officiis dolores animi magni, non reiciendis accusantium ad numquam aliquid, amet placeat nam. Sapiente dolore necessitatibus nobis voluptate vel sunt ad, placeat consectetur saepe ipsum ab officiis, hic accusantium adipisci aliquam pariatur ex! Tenetur consequuntur, ipsum. Cumque animi dolores necessitatibus deserunt eius asperiores magnam explicabo ab? Fugiat ipsa officia facere quaerat illum vel, incidunt tenetur facilis quos corporis iure placeat asperiores itaque aspernatur velit hic! Quidem sint, aperiam enim molestias assumenda quas facere consequatur, totam deserunt at eveniet, saepe adipisci mollitia sit et quaerat, beatae quisquam veniam accusamus explicabo asperiores illum cumque dolorem voluptate! Explicabo cum esse ratione! Molestias enim numquam, quo doloribus in quidem, molestiae ipsa, minus accusantium, neque quasi. Distinctio quam minus a dolore aspernatur unde velit explicabo. Minima maiores voluptatibus velit qui fugiat temporibus, consequuntur corrupti quis fuga quaerat nobis mollitia esse facilis laborum, pariatur illum, autem sit assumenda aut. Ipsum necessitatibus, eveniet quia error laudantium, pariatur. Consectetur facilis sequi, fugiat esse corporis ipsum eos consequuntur cupiditate distinctio aperiam ipsa iusto suscipit et sint aliquam animi odit nemo illum rerum ducimus. Autem voluptate, sunt, delectus repudiandae voluptatibus fugiat saepe neque placeat?
+				// конец таб 2
+				// таб 3
+				.tabs__content-item
+					.row
+						.col-sm-6.m-b-20
+							h3.title.m-b-20
+								span гарантия
+								| лучшей цены
+							.wysiwyg__block
+								p Вы получаете индивидуальный подход и можете в любой момент внести абсолютно любые изменение в свое путешествие.
+								p Не открывая глаз, по потрогал кожаный квадратик, висевший на ключах — на его старой, потертой поверхности были выжжены инициалы «Р.Д.Л.». Он не собирался искать ни нового кольца для ключей, ни нового куска кожи, чтобы выдавить на нем собственные инициалы.открывая глаз, по потрогал кожаный квадратик, висевший на ключах — на его старой, потертой поверхности были выжжены инициалы «Р.Д.Л.». Он не собирался искать ни нового кольца для ключей, ни нового куска кожи, чтобы выдавить на нем собственные инициалы.открывая глаз, по потрогал кожаный квадратик, висевший на ключах — на его старой, потертой поверхности были выжжены инициалы «Р.Д.Л.». Он не собирался искать ни нового кольца для ключей, ни нового куска кожи, чтобы выдавить на нем собственные инициалы.
+						.col-sm-6.m-b-20
+							img.tabs__content-item-img(src="img/content/tab.jpg", alt="")
+				// конец таб 3
+				// таб 4
+				.tabs__content-item
+					.row
+						.col-sm-6.m-b-20
+							img.tabs__content-item-img(src="img/content/tab.jpg", alt="")
+						.col-sm-6.m-b-20
+							h3.title.m-b-20
+								span Любые формы
+								| оплаты
+							.wysiwyg__block
+								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quos necessitatibus dicta vitae rerum consectetur praesentium provident porro blanditiis laborum!
+								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quos necessitatibus dicta vitae rerum consectetur praesentium provident porro blanditiis laborum!
+								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quod enim provident consequatur similique veniam architecto minima mollitia, error aut consectetur expedita iusto. Laborum incidunt et ducimus, nulla quis, quo inventore voluptates voluptatem earum tempore repellat ab quas esse laudantium perspiciatis illo aspernatur veritatis rem error! Placeat laudantium dolore in est repellendus distinctio delectus pariatur molestiae, tenetur, quae vel, minima earum voluptas veniam quibusdam sequi facere at id voluptatum debitis nihil magni, repudiandae. Necessitatibus, accusamus provident tempore. Odit non officia illum totam, unde mollitia architecto, cumque magnam rem nostrum reprehenderit libero neque! Earum voluptate sapiente magnam quam, quas commodi ipsum?
+				// конец таб 4
+				// таб 5
+				.tabs__content-item
+					.row
+						.col-sm-6.m-b-20
+							img.tabs__content-item-img(src="img/content/tab.jpg", alt="")
+						.col-sm-6.m-b-20
+							h3.title.m-b-20
+								span Поддержка
+								| 24/7
+							.wysiwyg__block
+								p Вы получаете индивидуальный подход и можете в любой момент внести абсолютно любые изменение в свое путешествие.
+								p Не открывая глаз, по потрогал кожаный квадратик, висевший на ключах — на его старой, потертой поверхности были выжжены инициалы «Р.Д.Л.». Он не собирался искать ни нового кольца для ключей, ни нового куска кожи, чтобы выдавить на нем собственные инициалы.
+				// конец таб 5
+		// конец табы
+		// дополнительные услуги
+		.text-center
+			h2.title
+				span наши
+				| услуги
+		.flex-section.flex-all-wrap.justify-center.row.m-t-30
+			- for (i=1; i<=3; i++) {
+				.col-sm-6.col-md-4
+					.flex-block.service__block
+						a(href="#!")
+							.service__block-img-wrap
+								.service__block-icon(style="background: url(../img/service-#{i}.png) center center no-repeat;")
+								img.service__block-bg(src="img/service-#{i}.jpg", alt="bg")
+							.service__block-text-wrap
+								p.service__block-text-title аренда любого транспорта
+								p.service__block-text Спорткар, яхта, вертолет? Может Лирджет или подводную лодку? Мы можем организовать все что угодно. 
+			-}
