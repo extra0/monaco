@@ -57,6 +57,7 @@ $(function(){
 	    	$('.hotels-choose__map-dot[data-index='+ hSlider.getCurrentSlide() +']').addClass('active');
 	  	},
 	  	onSliderLoad: function() {
+	  		$('li.hotels-choose__slider-item:first').addClass('active-slide');
 	  		$('.hotels-choose__slider-item').each(function(k){
 	  			$('.hotels-choose__map-dot').eq(k).attr('data-category', $(this).attr('data-category')); // проставляем категории для точек
 	  		});
@@ -67,11 +68,13 @@ $(function(){
 	// фильтрация отелей по категориям
 	$('.hotels-choose__filter-list-trigger').click(function(e){
 		e.preventDefault();
-		var category = event.target.getAttribute('data-category'),
-			slideIndex = $('.active-slide').index();
+		var category = event.target.getAttribute('data-category');
+			 
 
 		$('.hotels-choose__slider-item').show();
+		$('.hotels-choose__map-dot').hide();
 		$('.hotels-choose__map-dot').removeClass('active');
+		$('.hotels-choose__map-dot[data-' + category + ']').show();
 		$('.hotels-choose__slider-item').removeClass('active-slide slshow');
 		$('.hotels-choose__slider-item[data-' + category + ']').addClass('slshow');
 		e.preventDefault();
@@ -85,15 +88,21 @@ $(function(){
 			adaptiveHeight: true,
 			hideControlOnEnd: true,
 			onSliderLoad: function(currentIndex) {
-				// $('.hotels-choose__slider-wrap').find('.bx-viewport').find('ul').children().eq(0).addClass('active-slide');
+				var slideIndex = $('.active-slide').index(); // получаем индекс текущего слайда
+
 				$('li.hotels-choose__slider-item').not('.slshow').hide();
-				$('.hotels-choose__map-dot[data-index='+ (slideIndex+1) +']').addClass('active');
+				$('.hotels-choose__map-dot[data-index='+ slideIndex +']').addClass('active');
 			},
 			onSlideBefore: function($slideElement) {
-				$('.hotels-choose__slider-wrap').find('.bx-viewport').find('ul').children().removeClass('active-slide');
+				var slideIndex = $('.active-slide').index(); // получаем индекс текущего слайда
+
+				$('.hotels-choose__slider-item').removeClass('active-slide');
 				$slideElement.addClass('active-slide');
+
+				console.log(hSlider.getCurrentSlide());
+
 				$('.hotels-choose__map-dot').removeClass('active');
-		    	$('.hotels-choose__map-dot[data-index='+ hSlider.getCurrentSlide() +']').addClass('active');
+		    	$('.hotels-choose__map-dot[data-index='+ slideIndex +']').addClass('active');
 			},
 			slideSelector:'li.hotels-choose__slider-item.slshow'
 		});
