@@ -1,0 +1,19 @@
+{
+  "name": "monaco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/extra0/monaco.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/extra0/monaco/issues"
+  },
+  "homepage": "https://github.com/extra0/monaco#readme"
+}

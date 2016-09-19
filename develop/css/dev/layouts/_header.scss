@@ -141,13 +141,12 @@
 		color: #342927;
 		// font-size: 20px;
 		font-size: 16px;
-		display: inline-block;
+		display: block;
 		position: relative;
-		float: right;
-		margin: 20px 0 0 0;
+		margin: 4px 0 -2px 0;
 		&:before {
 			content: '';
-			@include position(absolute, 5px null null -23px);
+			@include position(absolute, 3px null null -23px);
 			background: url(../img/phone.png) 0 0 no-repeat;
 			width: 16px;
 			height: 16px;
@@ -156,6 +155,9 @@
 		&:focus {
 			color: #342927;
 			text-decoration: none;
+		}
+		&-wrap {
+			float: right;
 		}
 	}
 }
