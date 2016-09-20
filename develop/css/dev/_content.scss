@@ -210,6 +210,8 @@
 	&__block {
 		position: relative;
 		padding: 0;
+		max-height: 476px;
+		overflow: hidden;
 		&:not(:last-child) {
 			a {
 				&:before {
@@ -241,7 +243,7 @@
 				opacity: 0.9;
 			}
 			a {
-				height: 50%;
+				height: 48%;
 				@include display(flex);
 				@include flex-wrap(wrap);
 				@include align-items(center);
