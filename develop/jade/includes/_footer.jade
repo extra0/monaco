@@ -1,39 +1,75 @@
 footer.footer
 	.container
-		.footer__top
-			.footer__top-block
-				p.footer__top-block-title Меню
-				each item in footMenu
-					.footer__top-block-link-wrap
-						a.footer__top-block-link(href="#!") #{item}
-			.footer__top-block
-				p.footer__top-block-title Услуги
-				each item in footService
-					.footer__top-block-link-wrap
-						a.footer__top-block-link(href="#!") #{item}
-			.footer__top-block
-				p.footer__top-block-title Акции
-				each item in footAction
-					.footer__top-block-link-wrap
-						a.footer__top-block-link(href="#!") #{item}
-			.footer__top-block
-				p.footer__top-block-title Связь
-				each item in footComunication
-					.footer__top-block-link-wrap
-						a.footer__top-block-link(href="#!") #{item}
-			.footer__top-block
-				p.footer__top-block-title Давайте дружить
-				.footer__top-social-wrap
-					a.footer__top-social-link(href="#!" target="_blank")
-						img.footer__top-social-img(src="img/inst.png", alt="instagramm")
-				.footer__top-social-wrap
-					a.footer__top-social-link(href="#!" target="_blank")
-						img.footer__top-social-img(src="img/fb.png", alt="facebook")
-				.footer__top-social-wrap
-					a.footer__top-social-link(href="#!" target="_blank")
-						img.footer__top-social-img(src="img/vk.png", alt="vkontakte")
-		.footer__bottom
-			p.footer__bottom-copy &copy; Copyright 2016
-			.footer__bottom-development-block
-				p.footer__bottom-development-text Сделано в
-				a.footer__bottom-development(href="http://www.studio-maximus.com" target="_blank")
+		.row
+			.col-sm-12
+				.footer__logo
+					img(src="img/logo.png", alt="")
+		.row
+			.col-sm-4.col-md-3
+				.footer__phone-block
+					a.footer__phone(href="#!") 8 (495) 630-30-30
+					p.footer__phone-name МОСКВА
+				.footer__phone-block
+					a.footer__phone(href="#!") 8 (495) 630-30-30
+					p.footer__phone-name Питер
+				p.footer__description Монако.ру — уникальный проект компании RICHGROUP. Мы знаем все о Монако и оказываем абсолютно полный список услуг. С нами удобно. Звоните!
+			.col-sm-8.col-md-9.hidden-xs
+				.footer__block-m
+					.row
+						.col-sm-4
+							p.footer__menu-title Меню
+							ul.footer__menu-list
+								li.footer__menu-item
+									a.footer__menu-link(href="#!") Почему мы ?
+								li.footer__menu-item
+									a.footer__menu-link(href="#!") Контакты
+								li.footer__menu-item
+									a.footer__menu-link(href="#!") Услуги
+								li.footer__menu-item
+									a.footer__menu-link(href="#!") Туры
+								li.footer__menu-item
+									a.footer__menu-link(href="#!") Что посетить
+								li.footer__menu-item
+									a.footer__menu-link(href="#!") Отели
+								li.footer__menu-item
+									a.footer__menu-link(href="#!") Отзывы
+						.col-sm-8
+							.footer__catalog-block
+								p.footer__catalog-block-title Каталог услуг
+								ul.footer__catalog-block-menu
+									li.footer__catalog-block-menu-item
+										a.footer__catalog-block-menu-link(href="#!") Туры в Монако
+									li.footer__catalog-block-menu-item
+										a.footer__catalog-block-menu-link(href="#!") Трансферы
+									li.footer__catalog-block-menu-item
+										a.footer__catalog-block-menu-link(href="#!") Отели Монако
+									li.footer__catalog-block-menu-item
+										a.footer__catalog-block-menu-link(href="#!") Торжества в Монако
+									li.footer__catalog-block-menu-item
+										a.footer__catalog-block-menu-link(href="#!") Транспорт в Монако
+									li.footer__catalog-block-menu-item
+										a.footer__catalog-block-menu-link(href="#!") Недвижимость в Монако
+									li.footer__catalog-block-menu-item
+										a.footer__catalog-block-menu-link(href="#!") Билеты на мероприятия
+									li.footer__catalog-block-menu-item
+										a.footer__catalog-block-menu-link(href="#!") Персонал
+									li.footer__catalog-block-menu-item
+										a.footer__catalog-block-menu-link(href="#!") Экскурсии в Монако
+		.row
+			.footer__bottom
+				.col-sm-4.col-md-3.col-xs-4.hidden-xxs
+					p.footer__copyright &copy; 2016 RichGroup LLC
+				.col-sm-8.col-md-9.col-xs-8.col-xxs-12
+					.footer__block-m
+						.row
+							.col-sm-6.col-md-7.col-xs-6.col-xxs-12
+								.footer__social
+									a.footer__social-link(href="#!")
+										img(src="img/fb.png", alt="")
+									a.footer__social-link(href="#!")
+										img(src="img/vk.png", alt="")
+									a.footer__social-link(href="#!")
+										img(src="img/inst.png", alt="")
+									p.footer__social-text.hidden-sm.hidden-xs заходите в Инстаграм, там крутые фотки!
+							.col-sm-6.col-md-5.col-xs-6.col-xxs-12
+								.footer__develop Разработка — студия «Максимус»

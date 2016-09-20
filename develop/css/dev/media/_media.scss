@@ -178,31 +178,6 @@
 			}
 		}
 	}
-	.footer {
-		padding: 25px 0 20px 0;
-		&__top {
-			margin: 0;
-			@include flex-wrap(wrap);
-			@include justify-content(center);
-			&-block {
-				flex-basis: 49%;
-				padding: 0 20px!important;
-				margin-bottom: 30px;
-				&:nth-child(even) {
-					border-right: none;
-				}
-				&:last-child {
-					flex-basis: 100%;
-					text-align: left;
-					border-bottom: none;
-					padding: 0 30px!important;
-				}
-			}
-		}
-		&__bottom {
-			text-align: center;
-		}
-	}
 	#testimonial-window {
 		width: 450px;
 	}
@@ -291,6 +266,22 @@
 			}
 		}
 	}
+	.footer {
+		padding: 25px 10px;
+		&__develop,
+		&__copyright {
+			font-size: 14px;
+		}
+		&__block-m {
+			margin: 0;
+		}
+		&__social {
+			&-link {
+				margin-bottom: 10px;
+				display: inline-block;
+			}
+		}
+	}
 }
 @media (max-width: 499px) {
 	.xxs-text-center {text-align: center!important;}
@@ -356,23 +347,6 @@
 			margin: -22px 0 0 0;
 		}
 	}
-	.footer {
-		&__top {
-			margin: 0;
-			@include flex-wrap(wrap);
-			@include justify-content(center);
-			&-block {
-				flex-basis: 100%;
-				padding: 10px 10px 20px 10px!important;
-				margin-bottom: 10px;
-				border-right: none!important;
-				border-bottom: 1px solid #ddd;
-				&:last-child {
-					padding: 10px 10px 20px 10px!important;
-				}
-			}
-		}
-	}
 	.place {
 		&__block {
 			max-width: 350px;
@@ -387,6 +361,18 @@
 			flex-basis: 100%;
 			margin: 0 auto 20px auto;
 		}	
+	}
+	.footer {
+		&__description {
+			margin-bottom: 10px;
+		}
+		&__develop,
+		&__social {
+			text-align: center;
+			&-link {
+				margin: 0 5px 15px 5px;
+			}
+		}
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -547,22 +533,6 @@
 			}
 		}
 	}
-	.footer {
-		&__bottom {
-			text-align: center;
-		}
-		&__top {
-			@include flex-wrap(wrap);
-			@include justify-content(center);
-			&-block {
-				margin-bottom: 30px;
-				flex-basis: 32%;
-				&:nth-child(3) {
-					border-right: none;
-				}
-			}
-		}
-	}
 	.flex-sm-wrap {
 		@include flex-wrap(wrap);
 	}
@@ -605,6 +575,21 @@
 		&__items {
 			&-name {
 				font-size: 13px;
+			}
+		}
+	}
+	.footer {
+		&__block-m {
+			margin: -4px 0 0 30px;
+		}
+		&__catalog-block-menu-item {
+			display: block;
+			width: 100%;
+			margin: 0 6px 6px 0;
+		}
+		&__menu {
+			&-item {
+				margin-bottom: 6px;
 			}
 		}
 	}
@@ -696,29 +681,6 @@
 			}
 		}
 	}
-	.footer {
-		&__bottom {
-			text-align: center;
-		}
-		&__top {
-			&-social {
-				&-wrap {
-					display: block;
-				}
-				&-link {
-					margin: 0 auto 5px auto;
-				}
-			}
-			&-block {
-				&-title {
-					font-size: 14px;
-				}
-				&-link {
-					font-size: 13px;
-				}
-			}
-		}
-	}
 	.feedback {
 		&__rating {
 			&-block {
@@ -735,6 +697,18 @@
 		&__items {
 			&-name {
 				font-size: 13px;
+			}
+		}
+	}
+	.footer {
+		&__catalog {
+			&-block {
+				&-menu {
+					&-item {
+						display: block;
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
@@ -850,19 +824,6 @@
 			}
 		}
 	}
-	.footer {
-	    &__top {
-	    	&-block {
-	    		padding: 0 40px;
-	    		&-title {
-	    			font-size: 20px;
-	    		}
-	    		&-link {
-	    			font-size: 16px;
-	    		}
-	    	}
-	    }
-	}
 }
 @media (min-width: 1600px) {
 	.container {
@@ -877,13 +838,6 @@
 				margin-right: 20px;
 			}
 		}
-	}
-	.footer {
-	    &__top {
-	    	&-block {
-	    		padding: 0 40px;
-	    	}
-	    }
 	}
 	.hotels-choose {
 		&__map {
