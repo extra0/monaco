@@ -713,32 +713,14 @@
 		}
 	}
 }
-@media (min-width: 768px) {
-	.header {
-		position: fixed;
-	    width: 100%;
-	    background: #fff;
-	    z-index: 1000;
-	    border-bottom: 1px solid #ddd;
-	}
-	.content {
-		margin-top: 104px;
-	}
-}
 @media (min-width: 1200px) {
 	.container {
 		width: 1190px;
-	}
-	.content {
-		margin-top: 93px;
 	}
 }
 @media (min-width: 1400px) {
 	.container {
 		width: 1390px;
-	}
-	.content {
-		margin-top: 101px;
 	}
 	.header {
 		&__menu {
@@ -869,6 +851,11 @@
 		font-size: 14px;
 		line-height: 22px;
 	    letter-spacing: 2px;
+	}
+	.footer {
+		.container {
+			padding: 0 140px;
+		}
 	}
 }
 @media (min-width: 1800px) {

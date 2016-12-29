@@ -99,11 +99,13 @@
 .service {
 	@include maxWidth;
 	text-align: center;
+	width: 100%;
 	* {
 		@include transition(all 0.2s ease-in-out);
 	}
 	&-index {
 		overflow: hidden;
+		width: 100%;
 		.title {
 			display: inline-block;
 			text-align: right;
@@ -207,6 +209,7 @@
 	@include maxWidth;
 	@include display(flex);
 	min-height: 270px;
+	width: 100%;
 	&__block {
 		position: relative;
 		padding: 0;
@@ -243,7 +246,7 @@
 				opacity: 0.9;
 			}
 			a {
-				height: 48%;
+				height: 100%;
 				@include display(flex);
 				@include flex-wrap(wrap);
 				@include align-items(center);
@@ -629,10 +632,11 @@
 		} 
 		&-dot {
 			@include position(absolute, 7px -18px null null);
-			width: 10px;
-			height: 10px;
+			width: 16px;
+			height: 16px;
 			border-radius: 50%;
 			background-color: #a1918d;
+			box-shadow: 0px 0px 4px rgba(23, 23, 23, 0.34);
 			@include transition(all 0.2s ease-in-out);
 			&.active,
 			&:hover {
@@ -824,6 +828,7 @@
 }
 
 .service {
+	width: 100%;
 	&__block {
 		background: #fff;
 		max-width: 480px;
@@ -1111,4 +1116,10 @@
 		margin: 0;
 		border: none;
 	}
+}
+.text-blockqoute {
+	color: #fff;
+    font-size: 16px;
+    background: #2f2f2f;
+    padding: 30px 20px;
 }

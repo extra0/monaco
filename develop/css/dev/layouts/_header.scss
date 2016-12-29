@@ -144,13 +144,13 @@
 		display: block;
 		position: relative;
 		margin: 4px 0 -2px 0;
-		&:before {
-			content: '';
-			@include position(absolute, 3px null null -23px);
-			background: url(../img/phone.png) 0 0 no-repeat;
-			width: 16px;
-			height: 16px;
-		}
+		// &:before {
+		// 	content: '';
+		// 	@include position(absolute, 3px null null -23px);
+		// 	background: url(../img/phone.png) 0 0 no-repeat;
+		// 	width: 16px;
+		// 	height: 16px;
+		// }
 		&:hover,
 		&:focus {
 			color: #342927;
